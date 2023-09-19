@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eLearning>
+  <lesson>
+    <subject>विज्ञान</subject>
+    <topic>विज्ञान</topic>
+    <chapter>कुराकानी र जानकारी</chapter>
+    <levelname>कक्षा १</levelname>
+    <leveldescription>
+    </leveldescription>
+    <objective>
+      <title>Objectives:</title>
+      <description>
+        <purpose> दैनिक जीवनमा प्रयोग हुने सञ्‍चारका माध्यमहरूको नाम बताउन</purpose>
+      </description>
+    </objective>
+    <definition>
+      <description>
+      </description>
+    </definition>
+    <lessonDirection>
+      <purposes>
+      </purposes>
+      <about>
+      </about>
+      <lessonhelp>
+      </lessonhelp>
+      <exercisehelp>
+        <exerciseText>
+        </exerciseText>
+      </exercisehelp>
+    </lessonDirection>
+  </lesson>
+  <strings>
+    <string id="spacecharacter"> </string>
+    <string id="newLineCharacter">&#10;</string>
+
+   <!-- page 1-->
+
+    <string id="title1">सञ्‍चार</string>
+    <string id="slide1_sp1">आज शनिवारको दिन हो। मेरो परिवारका सबै सदस्‍यहरू आज घरमा छन्। उनीहरू के गर्दैछन् हेरौँ।</string>
+    <string id="slide1_toptxt1">बुवा रेडियो सुन्‍दै हुनुहुन्‍छ।</string>
+    <string id="slide1_toptxt2">बुवा के सुन्दै हुनुहुन्छ भनेर जान्‍नको लागि रेडियोमा क्लिक गर।</string>
+    
+    <string id="slide1_toptxt3">बुवा के सुन्‍दै हुनुहुन्‍छ? सही उत्तरमा क्लिक गर।</string>
+    <string id="slide1_p4_op1">मौसम समाचार</string>
+    <string id="slide1_p4_op2">गीत</string>
+    
+    <string id="slide1_toptxt4">आमा पत्रिका पढ्दै हुनुहुन्‍छ।</string>
+    <string id="slide1_toptxt5">आमाले के पढ्दैहुनुहुन्‍छ भनेर जान्‍नको लागि पत्रिकामा क्लिक गर।</string>
+    <string id="slide1_toptxt6">आमा के पढ्दै हुनुहुन्‍छ? सही उत्तरमा क्लिक गर।</string>
+    <string id="slide1_p8_op1">मौसम समाचार</string>
+    <string id="slide1_p8_op2">क्रिकेट</string>
+
+    
+    <string id="slide1_toptxt7">हजुरबुवाले सीतालाई फोन गर्न चहानुहुन्‍छ।</string>
+    <string id="slide1_toptxt8">सीतालाई १२३४ मा फोन गर।</string>
+    <string id="slide1_call">हेलो हजुरबुवा!</string>
+    <string id="slide1_call_next">हेलो छोरी!</string>
+
+
+    <string id="slide1_toptxt9">दिदी टेलिभिजन हेर्दैहुनुहुन्‍छ।</string>
+    <string id="slide1_toptxt10">दिदीले के हेरिरहेकी छिन् भनेर जान्‍नको लागि टिभिमा क्लिक गर।</string>
+    <string id="slide1_p16_ques">दिदीले  टेलिभिजनमा के हेर्दै छिन्? सही उत्तरमा क्लिक गर।</string>
+
+
+    <string id="slider_txt1">हामी अरुसँग कुरा गर्न फोन प्रयोग गर्छौँ।</string>
+    <string id="slider_txt2">हामी समाचार पढ्नको लागि पत्रिका पढ्छौँ।</string>
+    <string id="slider_txt3">हामी टेलिभिजनमा समाचार र खेल कार्यक्रमहरू हेर्छौँ।</string>
+    <string id="slider_txt4">हामी समाचार र गीत सुन्‍नको लागि रेडियो प्रयोग गर्छौँ।</string>
+
+    <string id="slide1_spbox">के तिमीले कुनै सञ्‍चारका साधनहरू प्रयोग गरेका छौ? तिमीले तिनीहरूलाई के को लागि प्रयोग गर्छौ?</string>
+
+
+    <!--page 2-->
+     <string id="slide2_toptxt1">फोन गर्न के प्रयोग गर्न सक्छौ?</string>
+    <string id="slide2_opt1">मोबाइल फोन</string>
+    <string id="slide2_opt2">टेलिभिजन</string>
+    <string id="wrong_feedback1">फेरि प्रयास गर। हामी समाचार, गीत र चलचित्र हेर्न टेलिभिजनको प्रयोग गर्छौं।</string>
+    
+    <string id="slide2_toptxt2">समाचार केमा पढ्न सकिन्‍छ?</string>
+     <string id="slide2_q2_opt1">रेडियो</string>
+    <string id="slide2_q2_opt2">पत्रिका</string>
+    <string id="wrong_feedback2">फेरि प्रयास गर। समाचार वा गीत सुन्‍नको लागि रेडियोहरूको प्रयोग गरिन्छ।</string>
+     <string id="wrong_feedback3">फेरि प्रयास गर। समाचार पढ्नको लागि पत्रिकाको प्रयोग गरिन्‍छ।</string>
+
+    <string id="slide2_toptxt3">समाचार हेर्न के प्रयोग गर्छौ?</string>
+    <string id="slide2_toptxt4">मौसम समाचार कहाँ सुन्‍न सकिन्‍छ?</string>
+  
+  <!-- playtime -->
+    <string id="boy_sbtxt">म को हुँ?</string>
+    <string id="instruction">मलाई चिनेर सही चित्रमा क्लिक गर।</string>
+    <string id="instruction_1">मानिसहरूले मलाई समाचार पढ्न प्रयोग गर्छन्।</string>
+    <string id="instruction_2">मानिसहरूले मलाई गीत सुन्‍न प्रयोग गर्छन्।</string>
+    <string id="instruction_3">मानिसहरूले मलाई समाचार हेर्न प्रयोग गर्छन्।</string>
+    <string id="instruction_4">मानिसहरूले मलाई मौसम समाचार सुन्‍न प्रयोग गर्छन्।</string>
+    <string id="instruction_5">मानिसहरूले मलाई खेलकुद कार्यक्रम हेर्न प्रयोग गर्छन्।</string>
+    <string id="instruction_6">मानिसहरूले मलाई भिडियो कल गर्न प्रयोग गर्छन्।</string>
+    <string id="instruction_7">मानिसहरूले मलाई मौसम समाचार पढ्न प्रयोग गर्छन्।</string>
+    <string id="instruction_8">मानिसहरूले मलाई फोन गर्न प्रयोग गर्छन्। </string>
+    <string id="instruction_9">मानिसहरूले मलाई चलचित्र हेर्न प्रयोग गर्छन्।</string>
+    <string id="instruction_10">मानिसहरूले मलाई खेलकुद समाचार सुन्‍न प्रयोग गर्छन्।</string>
+    <string id="playEndTxt">बधाई छ! तिमीले सञ्‍चारको बारेमा सिक्‍यौ!</string>
+
+ <string id="num0">0</string>
+  <string id="num1">1</string>
+  <string id="num2">2</string>
+  <string id="num3">3</string>
+  <string id="num4">4</string>
+  <string id="num5">5</string>
+  <string id="num6">6</string>
+  <string id="num7">7</string>
+  <string id="num8">8</string>
+  <string id="num9">9</string>
+
+
+
+
+  </strings>
+</eLearning>

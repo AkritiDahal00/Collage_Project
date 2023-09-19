@@ -1,0 +1,54 @@
+.ole-template-input-box-default{
+	background-color: #FEFAC5;
+	border-radius: 1vmin;
+	border: 0.5vmin solid #6997f4;
+	box-shadow: inset 1px 1px 2px #555;
+	font-size: 2.3vw;
+}
+.ole-template-input-box-default:focus{
+	box-shadow: none;
+	background-color: #FEF78A;
+}
+.ole-template-input-box-default-correct{
+	pointer-events: none;
+	box-shadow: none;
+	background-color: #C5F295;
+}
+.ole-template-input-box-default-incorrect{
+	box-shadow: none;
+	background-color: #FF7660;
+}
+
+.ole-template-check-btn-default{
+	cursor: pointer;
+	text-align: center;
+	color: #FFF;
+	font-family: Sniglet;
+	background-color: #43BEE7;
+	border-radius: 1.5vmin;
+	box-shadow: 2px 2px 0px #555;
+	font-size: 2.7vw;
+	padding: 1%!important;
+	cursor: pointer;
+}
+.ole-template-check-btn-default:hover{
+	background-color: #FABD15;
+}
+
+.ole-template-input-box-default-correct~.ole-template-check-btn-default, .ole-template-check-btn-default-correct{
+	pointer-events: none;
+	background-color: #4CAF50;
+}
+.ole-template-input-box-default-incorrect~.ole-template-check-btn-default, .ole-template-check-btn-default-incorrect{
+	/*pointer-events: none;*/
+	background-color: #D0553E;
+}
+
+@media (min-aspect-ratio: 4/3){
+	.ole-template-check-btn-default{
+		font-size: 3.5vmin;
+	}
+	.ole-template-input-box-default{
+		font-size: 3vmin;
+	}
+}

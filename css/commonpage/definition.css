@@ -1,0 +1,100 @@
+.definitionWrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	font-size: 1.3em;
+	background: #fff;
+	box-shadow: inset 0 0 30px #f2f2f2;
+
+    background: -moz-linear-gradient(93deg, rgba(255,255,255,1) 0%, rgba(247,251,236,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(247,251,236,1)), color-stop(100%, rgba(255,255,255,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(93deg, rgba(255,255,255,1) 0%, rgba(247,251,236,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(93deg, rgba(255,255,255,1) 0%, rgba(247,251,236,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(93deg, rgba(255,255,255,1) 0%, rgba(247,251,236,1) 100%); /* ie10+ */
+    background: linear-gradient(357deg, rgba(255,255,255,1) 0%, rgba(247,251,236,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7FBEC', endColorstr='#ffffff',GradientType=0 ); /* ie6-9 */
+
+}
+
+.definitionWrapper, .definitionWrapper * {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.board{
+	position: relative;
+	top:0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	/*border: 1px solid red;*/
+}
+
+.definition{
+	width: 100%;
+	height: 100%;
+
+	/*display: flex;
+	display: -webkit-flex;
+	flex-flow: column wrap;
+    -webkit-flex-flow: column wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;*/
+}
+
+.definition > figure{
+	width: 50%;	
+	padding-left: 5%;
+	margin-top: 4%;
+	/*height: 30%;
+	align-self:flex-start;*/
+}
+
+.definition > figure > img{
+	width: 100%;
+	/*height: 100%;*/
+}
+
+.definition > figure > figcaption{
+	top:55%;
+	left: 21.5%;
+	font-size: 2.5em;
+	color:#C98865;
+	position: absolute;
+	width: 74%;
+	
+}
+
+.definationtxt
+{
+	width: 100%;
+	
+	padding: 0% 4%;
+	margin-top: 3%;
+
+}
+.definationtxt > p{
+	color:black;
+	font-size: 1.3em;
+	
+	margin: 3% auto;
+	width: 100%;
+	text-align: left;
+}
+
+.definationtxt > p span.highlight{
+	color:#40B3DF;
+	font-size: 1.3em;
+	text-align: left;
+}
+
+.definationtxt > p span:after{
+	/*content:":";*/
+	color:inherit;
+	font-size: inherit;
+}
+

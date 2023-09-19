@@ -1,0 +1,247 @@
+.board {
+	position: relative;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	text-align: center;
+	overflow: hidden;
+}
+.board>*{
+	margin: 0;
+}
+
+/*-------------------------------------
+ * ----   vocablist list block   ------
+ * ------------------------------------*/
+.vocablist-wordslist{
+	position: absolute;
+	top: 0%;
+	left:0%;
+	width: 60%;
+	height: 80%;
+	padding: 11% 0% 5% 0%;
+	/*background-color: #72EDEC;*/
+	/*border-right: 1vmin solid #A9FEFC;*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+}
+
+.vocablist-col-slider{
+	position: absolute;
+	z-index: 100;
+		width: 12%;
+	top: 76%;
+		height: 5%;
+		cursor: pointer;
+	/* background-color: #92594A; */
+		color: white;
+		font-style: italic;
+		font-size: 1.5vw;
+}
+.vocablist-col-slider-left>p{
+	position: absolute;
+	width: 90%;
+	top: 50%;
+	left: 10%;
+	text-align: center;
+	transform: translateY(-50%);
+}
+.vocablist-col-slider-right>p{
+	position: absolute;
+	width: 90%;
+	top: 50%;
+	left: 0%;
+	text-align: center;
+	transform: translateY(-50%);
+}
+
+.vocablist-col-slider-left{
+	display: none;
+	left:4%;
+	background-image: url("../images/arrows/vocab/arrow_l.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.vocablist-col-slider-right{
+	display: none;
+	left: 34%;
+	background-image: url("../images/arrows/vocab/arrow_r.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.vocablist-word-col{
+	width: 50%;
+	min-width: 50%;
+	height: 100%;
+	padding: 0% 5%;
+	text-align: left;
+	float: left;
+}
+.vocablist-word-col>div{
+	height: 16.66%;
+	display: flex;
+	align-items: center;
+}
+.vocablist-each-word{
+	color: black;
+	font-size: 2.2vw;
+	padding: 1% 4%!important;
+}
+.vocablist-each-word-clicked{
+	color: white;
+	border-radius: 1vmin;
+	background-color: #E94F73;
+}
+.vocablist-each-word:hover:not(.vocablist-each-word-clicked){
+	cursor: pointer;
+	color: white;
+	border-radius: 1vmin;
+	background-color: #FF9E32;
+}
+/*-------------------------------------
+ * ----  vocablist meaning block ------
+ * ------------------------------------*/
+.vocablist-meaning{
+	position: absolute;
+	top: 5%;
+	left:65%;
+	width: 32%;
+	height: 66%;
+	padding: 10% 2% 4% 2%;
+	border-radius: 7.5%;
+	background-color: #E0F9FF;
+	overflow: auto;
+}
+.vocablist-meaning>*{
+	margin: 1%;
+	position: relative;
+}
+.vocablist-meaning-image{
+	border: 1vmin solid white;
+	box-shadow: 0px 0px 1px #888;
+	width: 90%;
+}
+.vocablist-meaning-header{
+	text-align: center;
+	font-size: 3vw;
+	color: #CB4D87;
+	/*text-shadow: -1px -1px #FF0000; */
+}
+.vocablist-meaning-desc{
+	text-align: center;
+	font-size: 2.2vw;
+	color: black; 
+}
+
+.vocablist-meaning-translation{
+	text-align: center;
+	font-size: 2.2vw;
+	color: #4D73DB;
+	font-family: ubuntu;
+	/*font-style: italic; */
+}
+
+
+/*-------------------------------------
+ * ----vocablist background block------
+ * ------------------------------------*/
+
+.vocablist-backgroundblock{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	z-index: 5;
+	padding: 0;
+}
+.vocablist-backgroundblock>*{
+	margin: 0;
+}
+.vocablist-text-header{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 30%;
+	font-size: 3.4vw;
+	color: #356074;
+	font-family: Pangolin;
+	text-shadow: 1px 1px solid #888;
+	z-index: 10;
+}
+
+.vocablist-image-banner{
+	left: 0%;
+	top: 1%;
+	position: absolute;
+	width: 57%;
+	height: 10%;
+	height: 10%;
+	z-index: 10;
+	background-image: url("../images/vocab_list/textband.png");
+	background-size: 100% 100%;
+}
+
+.vocablist-image-grass{
+	left: 0%;
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+	z-index: 10;
+}
+.vocablist-image-balloon{
+	position: absolute;
+	width: 12%;
+	top: -9%;
+	left: 1%;
+	z-index: 15;
+}
+
+.vocablist-mainbg-board{
+	background: #64e2ff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #2dbddb 0%, #64e2ff 30%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #2dbddb 0%, #64e2ff 30%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #2dbddb 0%, #64e2ff 30%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+/*-------------------------------------
+ * ----  for responsive fonts     -----
+ * ------------------------------------*/
+
+
+@media (min-aspect-ratio: 4/3){
+	.vocablist-text-header{
+		font-size: 4.7vmin;
+	}
+	
+	.vocablist-each-word{
+		font-size: 3.3vmin;
+	}
+	
+	.vocablist-meaning-header{
+		font-size: 4vmin;
+	}
+	.vocablist-meaning-desc{
+		font-size: 3.3vmin;
+	}
+
+	.vocablist-meaning-translation{
+		font-size: 3.3vmin;
+	}
+	
+	.vocablist-col-slider{
+		font-size: 2vmin;
+	}
+}
+
+@font-face {
+    font-family: Pangolin;
+    src: url('../fonts/Pangolin-Regular.ttf');
+}

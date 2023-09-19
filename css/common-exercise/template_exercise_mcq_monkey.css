@@ -1,0 +1,260 @@
+.activity_container {
+    width      : 100%;
+    height     : 100%;
+    position   : relative;
+    overflow   : hidden;
+    background : #fff;
+    box-shadow : inset 0 0 30px #f2f2f2;
+}
+
+.activity_container, .activity_container * {
+    position : relative;
+    margin   : 0;
+    padding  : 0;
+}
+
+.nextBtn {
+	display: none;
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	width: 7%;
+	height: 10%;
+	z-index: 10000;
+}
+
+.prevBtn {
+	display: none;
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	width: 7%;
+	height: 10%;
+	z-index: 10000;
+}
+
+.myNextStyle {
+	cursor: pointer;
+	background-image: url("../../images/arrows/arrow.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.myNextStyle:hover {
+	background-image: url("../../images/arrows/arrow_hover.png");
+}
+
+.myNextStyle:active {
+	background-image: url("../../images/arrows/arrow_active.png");
+}
+
+.myPrevStyle {
+	cursor: pointer;
+	background-image: url("../../images/arrows/arrow_prev.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.myPrevStyle:hover {
+	background-image: url("../../images/arrows/arrow_hover_prev.png");
+}
+
+.myPrevStyle:active {
+	background-image: url("../../images/arrows/arrow_active_prev.png");
+}
+
+.board {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+    font-family: amaranth;
+}
+
+@font-face {
+    font-family: amaranth;
+    src: url("../fonts/amaranath/amaranth-regular.ttf");
+}
+
+div.generaltemplateblock {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	/*border   : 1px solid red; */
+}
+
+div.generaltemplateblock[data-templatecontains='hasheaderblock'] div.contentblock {
+	top: 20%;
+	height: 80%;
+	position: absolute;
+	width: 100%;
+}
+
+div.generaltemplateblock[data-templatecontains='hasonlycontent'] div.contentblock {
+	top: 0%;
+	height: 100%;
+}
+.contentblock{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+}
+
+.exerciseblock{
+	position: relative;
+	width: 100%;
+	height: 85%;
+	left: 0%;
+	top: 0%;
+	margin-top: 9%;
+}
+.scoreboard_rhino~.board>.generaltemplateblock>.contentblock>.exerciseblock{
+	margin-top: 5%;
+}
+
+/*----------------------------------------------
+ * ------ css specific for this exercise -------
+ * ---------------------------------------------*/
+.default-bg{
+	background: -webkit-linear-gradient(290deg, rgb(182, 160, 173) 0%, rgb(203, 179, 195) 100%);
+	background: -o-linear-gradient(290deg, rgb(182, 160, 173) 0%, rgb(203, 179, 195) 100%);
+	background: -ms-linear-gradient(290deg, rgb(182, 160, 173) 0%, rgb(203, 179, 195) 100%);
+	background: -moz-linear-gradient(290deg, rgb(182, 160, 173) 0%, rgb(203, 179, 195) 100%);
+	background: linear-gradient(160deg, rgb(182, 160, 173) 0%, rgb(203, 179, 195) 100%);
+}
+.center-sundar{
+	position: absolute!important;
+	top: 45%;
+	left: 42.5%;
+	width: 15%;
+	/*transform: translateX(-50%);*/
+}
+.instruction{
+	position: absolute!important;
+	text-align: center;
+	font-size: 2.8vw;
+	width: 100%;
+}
+
+.question{
+	position: absolute !important;
+	text-align: center;
+	font-size: 2.8vw;
+	font-family: Sniglet;
+	width: 100%;
+	left: 0%;
+	color: #595959;
+	bottom: 85%;
+}
+
+.main-container{
+	position: absolute!important;
+	width: 20%;
+	height: 30%;
+}
+
+.option-pos-1{
+	top: 20%;
+	left: 7%;
+}
+.option-pos-2{
+	top: 20%;
+	right: 7%;
+}
+.option-pos-3{
+	top: 66%;
+	left: 7%;
+}
+.option-pos-4{
+	top: 66%;
+	right: 7%;
+}
+
+.option-container{
+	position: relative;
+	top: 10%;
+	cursor: pointer;
+	border-radius: 3vmin;
+	background-color:#7B74D4;
+	color:white;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 90%;
+	border:none;
+}
+.option-container:hover{
+	transform: scale(1.1);
+	border:3px solid;
+	transition:0.4s;
+	background-color: #F9CB9C;
+	border-color: #E39540;
+	color:#43434B;
+	border-radius: 3vmin;
+}
+
+.option-label{
+	position: relative;
+	font-family: ShortStack;
+	font-size: 3vw;
+}
+
+.correct-icon, .incorrect-icon{
+	display: none;
+	position: absolute!important;
+	height: 25%;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 90%;
+}
+
+.correct-ans{
+	pointer-events: none;
+	background-color: #98C02E;
+	border:3px solid;
+	border-color: #DEEF3C;
+	border-radius:3vmin;
+	color: white;
+}
+.incorrect-ans{
+	pointer-events: none;
+	background-color:#FF0000;
+	border:3px solid;
+	border-color: #980000;
+	color: white;
+	border-radius: 3vmin;
+}
+
+@media (min-aspect-ratio: 4/3){
+	.instruction{
+		font-size: 5vmin;
+	}
+	.question{
+		font-size: 5vmin;
+	}
+	.option-label{
+		font-size: 5vmin;
+	}
+}
+@font-face {
+    font-family: Sniglet;
+    src: url('../../fonts/sniglet.ttf');
+}
+@font-face {
+    font-family: ShortStack;
+    src: url('../../fonts/ShortStack.ttf');
+}
+@font-face {
+    font-family: Pangolin;
+    src: url('../../fonts/Pangolin-Regular.ttf');
+}
+@font-face {
+    font-family: HappyMonkey;
+    src: url('../../fonts/happy_monkey/HappyMonkey-Regular.ttf');
+}

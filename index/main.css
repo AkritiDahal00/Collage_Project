@@ -1,0 +1,462 @@
+@font-face {
+	font-family: "Warnes";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Warnes"), local("Warnes-Regular"), url("IeM26aZh6wEmm42pWGUMfg.woff2") format("woff2");
+}
+
+#activity-page-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background-color: #f9f9fb; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.my_activity {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	font-size: 1.3em;
+	background: #fff;
+	box-shadow: inset 0 0 30px #f2f2f2;
+}
+.main {
+    width: 100%;
+}
+
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.my_activity, .my_activity * {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.my_activity .nextBtn {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	bottom: 0%;
+	right: 0%;
+	width: 7%;
+	height: 10%;
+}
+
+.my_activity .prevBtn {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	bottom: 0%;
+	left: 0%;
+	width: 7%;
+	height: 10%;
+}
+
+/*=====================================
+ =            common styles            =
+ =====================================*/
+.board {
+	position: relative;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+
+.coverboardfull {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*=====  End of common styles  ======*/
+
+/*===============================================
+ =            general template layout            =
+ ===============================================*/
+
+div.generalTemplateblock {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	/*border   : 1px solid red; */
+}
+
+/*===================================
+ =            HeaderBlock            =
+ ===================================*/
+
+div.headerblock {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 10%;
+	/*border   : 1px solid red;*/
+}
+
+div.headerblock p.headertextstyle {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1% 2%;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: rgb(238, 110, 115);
+	background-color: rgb(252, 252, 252);
+	text-align: center;
+}
+
+div.generalTemplateblock[data-templatecontains='hasheaderblock'] div.headerblock {
+	height: 13%;
+}
+
+div.generalTemplateblock[data-templatecontains='hasheaderblock'] div.headerblock p.headertextstyle {
+	padding: 2%;
+}
+
+/*=====  End of HeaderBlock  ======*/
+
+
+/*====================================
+ =            ContentBlock            =
+ ====================================*/
+
+div.generalTemplateblock div.contentblock {
+	position: absolute;
+	width: 100%;
+	padding: 1%;
+	/*border   : 1px solid blue;*/
+}
+
+div.generalTemplateblock[data-templatecontains='hasheaderblock'] div.contentblock {
+	top: 13%;
+	height: 87%;
+}
+
+div.generalTemplateblock[data-templatecontains='hasonlycontent'] div.contentblock {
+	top: 0%;
+	height: 100%;
+}
+
+/*=====  End of ContentBlock  ======*/
+
+/*==================================
+ =            Text Block            =
+ ==================================*/
+
+.its_hidden {
+	display: none;
+}
+
+/* -------- speech box ends --------- */
+
+
+/*----------------------------------
+ |			Animations			   |
+ -------------------------------- */
+.fade-in {
+	animation: appear 1s linear both;
+	-webkit-animation: appear 1s linear both;
+}
+.fade-in-1 {
+	animation: appear 1s linear 1s both;
+	-webkit-animation: appear 1s linear 1s both;
+}
+@-webkit-keyframes
+appear {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@keyframes
+appear {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+.fade-out {
+	animation: disappear 1s linear both;
+	-webkit-animation: disappear 1s linear both;
+}
+
+@-webkit-keyframes
+disappear {
+	100% {opacity: 0;}
+}
+@keyframes
+disappear {
+	100% {opacity: 0;}
+}
+/*=====  End of Text Block  ======*/
+
+/*===================================
+ =            Image Block            =
+ ===================================*/
+
+div.imageblock {
+	position: absolute;
+	/*border     : 1px solid green; */
+}
+
+div.imageblock label {
+	position: absolute;
+}
+
+.horizontal_center {
+	left: 50%;
+	transform: translate(-50%, 0%);
+	-moz-transform: translate(-50%, 0%);
+	-webkit-transform: translate(-50%, 0%);
+	text-align: center;
+}
+
+.cover_full {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/* === Activity Specific Image Blocks === */
+
+
+/*=====  End of Image Block  ======*/
+
+/*============================================
+ =            Definition layout               =
+ ============================================*/
+div.definitionblock > img {
+	position: relative;
+	width: 50%;
+	left: -20%;
+}
+
+div.definitionblock > figcaption {
+	position: relative;
+	margin-top: -8%;
+	left: -21%;
+	font-size: 2em;
+	color: rgb(201, 136, 116);
+}
+
+div.definitionblock > p.definitiontextstyle {
+	position: relative;
+	text-align: left;
+	margin-top: 15%;
+	font-size: 1.5em;
+	padding: 0% 2%;
+	/* border  : 1px solid red; */
+}
+
+/*=====  End of Definition layout  ======*/
+
+/*=====  End of general template layout  ======*/
+
+.ul{
+	text-decoration: underline;
+}
+.bold{
+	font-weight: bold;
+}
+
+.speechbox{
+	position: absolute;
+	width: 25%;
+	height: 15%;
+	font-family: sniglet;
+	font-size: 2.1vw;
+}
+.speechbg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+}
+@media (min-aspect-ratio: 4/3){
+	.speechbox{
+		font-size: 2.8vh;
+	}
+}
+/*.speechbox>p{
+	position: absolute;
+	width: 84%;
+	left: 8%;
+	top: 40%;
+	transform: translateY(-50%);
+}*/
+.speechbox>.audioicon{
+	position: absolute;
+	width: 10%;
+	right: 5%;
+	top: 12%;
+}
+.flipped-h{
+	transform: rotateY(180deg);
+}
+
+.text-story{
+	position: absolute;
+	color: #595959;
+	font-size: 3.3vw;
+	line-height: 5vw;
+	padding: 1.5%;
+	z-index: 15;
+	color: #595959;
+}
+.aligned-left{
+	text-align: left;
+}
+.text-story>p{
+	position: relative;
+	width: 100%;
+	margin: 5% 0%;
+}
+.text-font-2{
+	font-size: 3vw;
+}
+@media(min-aspect-ratio:4/3){
+	.text-story{
+		font-size: 4.5vh;
+		line-height: 6.6vh;
+	}
+	.text-font-2{
+		font-size: 4vh;
+	}
+}
+.bg-full{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*-------------- For Loading ---------------*/
+
+#loading-wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: #222;
+}
+
+#loading-text {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: #999;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 3vmin;
+}
+
+#loading-content {
+	display: block;
+	position: absolute;
+	left: 40%;
+	top: 33.35%;
+	width: 20%;
+	height: 33.3%;
+	transform: translate(-50%, -50%);
+	border: 3px solid #F00;
+}
+
+#loading-content:after {
+	content: "";
+	position: absolute;
+	border: 3px solid #0F0;
+	left: 15%;
+	right: 15%;
+	top: 15%;
+	bottom: 15%;
+}
+
+#loading-content:before {
+	content: "";
+	position: absolute;
+	border: 3px solid #00F;
+	left: 5%;
+	right: 5%;
+	top: 5%;
+	bottom: 5%;
+}
+
+#loading-content {
+	border: 3px solid transparent;
+	border-top-color: #0056eb;
+	border-bottom-color: #0453db;
+	border-radius: 50%;
+	-webkit-animation: loader 2s linear infinite;
+	-moz-animation: loader 2s linear infinite;
+	-o-animation: loader 2s linear infinite;
+	animation: loader 2s linear infinite;
+}
+
+#loading-content:before {
+	border: 3px solid transparent;
+	border-top-color: #e6d308;
+	border-bottom-color: #f0f0f0;
+	border-radius: 50%;
+	-webkit-animation: loader 3s linear infinite;
+	-moz-animation: loader 2s linear infinite;
+	-o-animation: loader 2s linear infinite;
+	animation: loader 3s linear infinite;
+}
+
+#loading-content:after {
+	border: 3px solid transparent;
+	border-top-color: #e90bcf;
+	border-bottom-color: #5a0450;
+	border-radius: 50%;
+	-webkit-animation: loader 1.5s linear infinite;
+	animation: loader 1.5s linear infinite;
+	-moz-animation: loader 2s linear infinite;
+	-o-animation: loader 2s linear infinite;
+}
+
+@-webkit-keyframes loaders {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}

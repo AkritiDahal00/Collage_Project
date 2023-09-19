@@ -1,0 +1,40 @@
+{
+    "science": {
+      "desc": "science science",
+      "typesid": [
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "geology",
+        "health",
+        "SciPro"
+      ],
+      "typesen": [
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Geology and Astronomy",
+        "Health and Nutrition",
+        "Science Projects"
+      ],
+      "typesnp": [
+        "भौतिक",
+        "रसायन",
+        "जीव",
+        "भू तथा अन्तरिक्ष",
+        "स्वास्थ्य र पोषण",
+        "विज्ञान परियोजनाहरू"
+      ],
+      "configFile": "science.json",
+      "id": "sci",
+      "np": "विज्ञान",
+      "en": "Science",
+      "surroundingtexten":"Our Surrounding",
+      "surroundingtextnp":"हाम्रो वरपर",
+      "color": "redScience",
+      "img": "images/science_homepage_light.png"
+  
+    }
+  
+  }
+  

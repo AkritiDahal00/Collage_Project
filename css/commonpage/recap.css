@@ -1,0 +1,108 @@
+.recapWrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	font-size: 1.3em;
+	background: #fff;
+	box-shadow: inset 0 0 30px #f2f2f2;
+
+    background: -moz-linear-gradient(93deg, rgba(255,255,255,1) 0%, rgba(247,251,236,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(247,251,236,1)), color-stop(100%, rgba(255,255,255,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(93deg, rgba(255,255,255,1) 0%, rgba(247,251,236,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(93deg, rgba(255,255,255,1) 0%, rgba(247,251,236,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(93deg, rgba(255,255,255,1) 0%, rgba(247,251,236,1) 100%); /* ie10+ */
+    background: linear-gradient(357deg, rgba(255,255,255,1) 0%, rgba(247,251,236,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7FBEC', endColorstr='#ffffff',GradientType=0 ); /* ie6-9 */
+
+}
+
+.recapWrapper, .recapWrapper * {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.board{
+	position: relative;
+	top:0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	/*border: 1px solid red;*/
+}
+
+.recap{
+	width: 100%;
+	height: 100%;
+
+	
+}
+
+.recap > figure{
+	width: 25%;	
+	padding-left: 1%;
+	margin-top: 1%;
+	
+}
+
+.recap > figure > img{
+	width: 100%;
+	
+}
+
+.recap > figure > figcaption{
+	top:50%;
+	left: 7%;
+	font-size: 1.2em;
+	color:#C98865;
+	position: absolute;
+	width: 53%;
+	
+}
+
+ul.recaptxt
+{
+	width: 100%;	
+	padding:1% 3%;
+	margin-top: 1%;
+	max-height: 75%;
+	overflow-y: scroll;
+
+}
+
+/* according to list elemnt class defined the following styles are 
+	taken large/medium/small/minimalhorizontalgridspacing*/
+ul.recaptxt.largehorizontalgridspacing > li{
+	list-style: disc;
+	font-size: 1.15em;	
+	margin: 1% auto;
+	width: 100%;
+	text-align: left;	
+}
+
+ul.recaptxt.mediumhorizontalgridspacing > li{
+	list-style: disc;
+	font-size: 1.1em;	
+	margin: 0.5% auto;
+	width: 100%;
+	text-align: left;	
+}
+
+ul.recaptxt.smallhorizontalgridspacing > li{
+	list-style: disc;
+	font-size: 1.05em;	
+	margin: 0.3% auto;
+	width: 100%;
+	text-align: left;	
+}
+
+ul.recaptxt.minimalhorizontalgridspacing > li{
+	list-style: disc;
+	font-size: 1em;	
+	margin: 0.05% auto;
+	width: 100%;
+	text-align: left;	
+}
+

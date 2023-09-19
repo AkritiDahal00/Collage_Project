@@ -1,0 +1,225 @@
+.activity_container {
+    width      : 100%;
+    height     : 100%;
+    position   : relative;
+    overflow   : hidden;
+    background : #fff;
+    box-shadow : inset 0 0 30px #f2f2f2;
+}
+
+.activity_container, .activity_container * {
+    position : relative;
+    margin   : 0;
+    padding  : 0;
+}
+
+.nextBtn {
+	display: none;
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	width: 7%;
+	height: 10%;
+	z-index: 10000;
+}
+
+.prevBtn {
+	display: none;
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	width: 7%;
+	height: 10%;
+	z-index: 10000;
+}
+
+.myNextStyle {
+	cursor: pointer;
+	background-image: url("../../images/arrows/arrow.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.myNextStyle:hover {
+	background-image: url("../../images/arrows/arrow_hover.png");
+}
+
+.myNextStyle:active {
+	background-image: url("../../images/arrows/arrow_active.png");
+}
+
+.myPrevStyle {
+	cursor: pointer;
+	background-image: url("../../images/arrows/arrow_prev.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.myPrevStyle:hover {
+	background-image: url("../../images/arrows/arrow_hover_prev.png");
+}
+
+.myPrevStyle:active {
+	background-image: url("../../images/arrows/arrow_active_prev.png");
+}
+
+.board {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+    font-family: amaranth;
+}
+
+@font-face {
+    font-family: amaranth;
+    src: url("../fonts/amaranath/amaranth-regular.ttf");
+}
+
+div.generaltemplateblock {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	/*border   : 1px solid red; */
+}
+
+div.generaltemplateblock[data-templatecontains='hasheaderblock'] div.contentblock {
+	top: 20%;
+	height: 80%;
+	position: absolute;
+	width: 100%;
+}
+
+div.generaltemplateblock[data-templatecontains='hasonlycontent'] div.contentblock {
+	top: 0%;
+	height: 100%;
+}
+.contentblock{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+}
+
+.exerciseblock{
+	position: relative;
+	width: 100%;
+	height: 85%;
+	left: 0%;
+	top: 0%;
+	margin-top: 9%;
+}
+.scoreboard_rhino~.board>.generaltemplateblock>.contentblock>.exerciseblock{
+	margin-top: 5%;
+}
+
+/*----------------------------------------------
+ * ------ css specific for this exercise -------
+ * ---------------------------------------------*/
+.instruction{
+	position: relative;
+	text-align: center;
+	font-size: 2.8vw;
+	width: 100%;
+}
+
+.question{
+	position: relative;
+	margin-top: 1%;
+	text-align: center;
+	font-size: 2.8vw;
+	width: 90%;
+	left: 5%;
+}
+
+.option-block{
+	position: absolute;
+	margin-top: 3%;
+	height: 60%;
+	width: 100%;
+	display: flex;
+	left: 0%;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.main-container{
+	position: relative;
+	width: 22%;
+	height: 100%;
+}
+.option-container{
+	cursor: pointer;
+	border-radius: 3vmin;
+	border: 0.5vmin solid #2e2983;
+	overflow: hidden;
+	height: 95%;
+}
+.option-container:hover{
+	border-color: #00b7ff;
+}
+.option-image{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+}
+
+.option-label {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    height: 20%;
+    width: 100%;
+    font-size: 2vw;
+    color: white;
+    background-color: #484848;
+}
+
+.option-label ~ .option-image{
+	height: 80%;
+	max-width: 100%;
+	width: auto;
+}
+
+.correct-icon, .incorrect-icon{
+	display: none;
+	position: absolute;
+	height: 16%;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 100%;
+}
+
+.correct-ans{
+	pointer-events: none;
+  border-color: #156615;;
+}
+
+.correct-ans p{
+  background-color: #156615;;
+}
+.incorrect-ans{
+	pointer-events: none;
+	background-color: #ce2525;
+  border-color: #ce2525;
+}
+.incorrect-ans p{
+  background-color: #ce2525;
+}
+
+@media (min-aspect-ratio: 4/3){
+	.instruction{
+		font-size: 4vmin;
+	}
+	.question{
+		font-size: 4vmin;
+	}
+	.option-label{
+		font-size: 3vmin;
+	}
+}

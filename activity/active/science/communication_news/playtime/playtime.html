@@ -1,0 +1,153 @@
+<!--
+Title : General Template
+-->
+
+<script type="text/javascript">
+  $cssLoader("css/common.css");
+  $cssLoader("../../../../css/rhino_template.css");
+  $cssLoader("playtime/css/playtimetemplate.css");
+  // $cssLoader("exercise/css/exercise.css");
+  $cssLoader("../../../../css/gradient.css");
+  $cssLoader("playtime/css/playtime.css");
+</script>
+<!-- cssloader ends -->
+
+<head>
+  <!-- added to load data directly from server TO REMOVE DURING DEPLOYMENT-->
+  <meta http-equiv=“Pragma” content=”no-cache”>
+  <meta http-equiv=“Expires” content=”-1″>
+  <meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+  <!-- added to load data directly from server ends -->
+</head>
+
+<div class="activity_container">
+  <div id="loading-wrapper">
+    <div id="loading-text">
+      LOADING
+    </div>
+    <div id="loading-content"></div>
+  </div>
+  <div class="board"></div>
+  <div class="nextBtn myNextStyle"></div>
+  <div class="prevBtn myPrevStyle"></div>
+</div>
+
+<script id="general-template" type="text/x-handlebars-template">
+    {{! update templatecontains data for if it has header, instruction, headerinstruction
+    or only has content --}}
+    {{#if hasheaderblock}}
+      <div class="generalTemplateblock" data-templatecontains="hasheaderblock">
+        {{else}}
+        <div class="generalTemplateblock" data-templatecontains="hasonlycontent">
+    {{/if}}
+            
+            
+    {{! header block start--}}
+    {{#if headerblock}}
+    <div class="headerblock {{headerblockadditionalclass}}">
+        {{#each headerblock}}
+        {{> textcontent}}
+        {{/each}}
+    </div>
+    {{/if}}
+    {{! header block end--}}
+
+
+    {{! content block start--}}
+    <div class="contentblock {{contentblockadditionalclass}}">
+        {{!content block content wrapper used for content orientation - centered vertically and horizontally--}}
+        <div class="coverboardfull {{coverboardadditionalclass}}">
+          <img class="{{imgclass}}" src="{{imgsrc}}">
+            {{#if uppertextblock}}
+              <div class="textblock {{uppertextblockadditionalclass}}">
+                {{#each uppertextblock}}
+                  {{> textcontent}}
+                {{/each}}
+              </div>
+            {{/if}}
+
+
+            {{#each imageblock}}
+              <div class="{{imgblkclass}}">
+                {{> imagecontent}}
+                {{#if textblock}}
+                  {{> textcontent}}
+                {{/if}}
+              </div>
+            {{/each}}
+
+            {{#if lowertextblock}}
+              <div class="textblock {{lowertextblockadditionalclass}}">
+                {{#each lowertextblock}}
+                  {{> textcontent}}
+                {{/each}}
+              </div>
+            {{/if}}
+
+            {{#each extratextblock}}
+            <img class="{{imgclass}}" src="{{imgsrc}}">
+              <p class="{{textclass}}" data-highlight="{{datahighlightflag}}" data-highlightcustomclass="{{datahighlightcustomclass}}">{{{textdata}}}</p>
+            {{/each}}
+
+            {{#each speechbox}}
+              <div class="speechbox {{speechbox}}">
+                <img class="speechbg {{imgclass}}" src="{{imgsrc}}">
+                <p class="{{textclass}}" data-highlight="{{datahighlightflag}}" data-highlightcustomclass="{{datahighlightcustomclass}}">{{{textdata}}}</p>
+                {{#if audioicon}}
+                  <img class="audioicon {{audioclass}}" src="images/speaker.png">
+                {{/if}}
+              </div>
+            {{/each}}
+
+            {{#each mcqblock}}
+              <div class="mcqContainer {{mcqContainerAdditionalClass}}">
+                {{#each optdiv}}
+                  <div class="clickable {{optdivclass}}">
+                    <p class="{{textclass}}" data-highlight="{{datahighlightflag}}" data-highlightcustomclass="{{datahighlightcustomclass}}">{{{textdata}}}</p>                  
+                    
+                    {{#if hasimages}}
+                      {{#each imageblock}}
+                          {{> imagecontent}}
+                      {{/each}}
+                    {{/if}}
+
+                    {{#if hasSpeaker}}
+                       <img class="audioicon {{audioclass}}" src="images/speaker.png">
+                    {{/if}}
+
+                    <img src="images/correct.png" class="corincorclass {{corincoraddnalclass}} corctopt">
+
+                    <img src="images/wrong.png" class="corincorclass {{corincoraddnalclass}} wrngopt">
+                  </div>
+                {{/each}}                
+              </div>
+            {{/each}}
+        </div>
+      </div>
+    {{! content block end--}}
+
+
+        </div>
+    </div>
+</script>
+<!-- partials separated as subtemplate in handlebars -->
+<script id="textcontent-partial" type="text/x-handlebars-template">
+    <p class="{{textclass}}" data-highlight="{{datahighlightflag}}"
+       data-highlightcustomclass="{{datahighlightcustomclass}}">{{{textdata}}}</p>
+</script>
+
+<script id="imagecontent-partial" type="text/x-handlebars-template">
+    {{#each imagestoshow}}
+    <img name="{{imgname}}" class="{{imgclass}}" src="{{imgsrc}}">
+    {{/each}}
+</script>
+
+<!-- js loader starts -->
+<script type="text/javascript" src="js/preloadjs-0.6.2.min.js"></script>
+<script type="text/javascript" src="js/soundjs-0.6.2.min.js"></script>
+<script type="text/javascript">
+  $jsLoader("playtime/js/playtime.js");
+</script>
+<script type="text/javascript">
+    // $jsLoader("js/commonjs.js");
+</script>

@@ -1,0 +1,444 @@
+<!--
+___  _     _____   _   _ _____ ____   _    _
+/ _ \| |   | ____| | \ | | ____|  _ \ / \  | |
+| | | | |   |  _|   |  \| |  _| | |_) / _ \ | |
+| |_| | |___| |___  | |\  | |___|  __/ ___ \| |___
+\___/|_____|_____| |_| \_|_____|_| /_/   \_\_____|
+
+welcome to OLE Nepal
+
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172822248-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-172822248-2');
+        </script>
+    	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<title>eLearning</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- added to load data directly from server TO REMOVE DURING DEPLOYMENT-->
+		<meta http-equiv=“Pragma” content=”no-cache”>
+		<meta http-equiv=“Expires” content=”-1″>
+		<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+		<!-- added to load data directly from server ends -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href=""/>
+		<!-- <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" /> -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/activity-page.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font_collection.css">
+		<link rel="stylesheet" type="text/css" href="css/templetestyle.css">
+		<link rel="stylesheet" type="text/css" href="css/startemplate.css">
+		<script type="text/javascript" src="js/timeme.js"></script>
+		<script type="text/javascript" src="js/timeme.min.js"></script>
+		<script type="text/javascript" src="js/axios.js"></script>
+
+		<style type="text/css">
+			@font-face {
+				font-family: ubuntu;
+				/*src: url(fonts/Lohit-Nepali.ttf);*/
+				/* src: url(fonts/kalimati.ttf); */
+				src: url(fonts/mangal.ttf);
+				/*src: url(fonts/jagamanjari.ttf);*/
+			}
+			@font-face {
+				font-family: kalimati;
+				src: url(fonts/kalimati.ttf);
+				/*src: url(fonts/madan.ttf);*/
+				/*src: url(fonts/jagamanjari.ttf);*/
+			}
+
+			
+			body {
+            /* background: #3b8fa3; */
+				background-image: url('');
+				background-position: center;
+				background-repeat: no-repeat;background-size: cover;
+				/* font-family: poppins; */
+        	}
+			body:lang(np), body:lang(np) * {
+				font-family: ubuntu !important;
+			}
+
+			/* For CHERD font change page no */
+			/* .head-pages-list:lang(np), #activity-page-current-slide:lang(np) , #activity-page-total-slide:lang(np) {
+				font-family: kalimati !important;
+			} */
+			/* body * {
+				font-family: 'poppins' !important;
+			} */
+			body:lang(np) .glyphicon {
+				font-family: 'Glyphicons Halflings' !important;
+			}
+			.activity-page-nav-pills>a>span {
+				font-family: 'poppins' !important;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="activity-page-container">
+			<header id="activity-page-header">
+				<div id="activity-page-navbar" role="navigation">
+					<div id='activity-page-logo'>
+						<a href="index.html"><img src="" alt=""></a>
+					</div>
+					<div id="activity-page-menu-container">
+						<!-- <a class="" href="#"><span id="activity-page-menu-text">सुचि</span></a> -->
+						<!-- <a class="" href="#"><img id="activity-page-menu-img" src="images/activity/menu_home_blue.png"></a> -->
+						<img class="popup_click" src="">
+					</div>
+
+					<div id="activity-page-title">
+						<script type="text/x-handlebars-template" id="breadcrumbs">
+							<span id="breadCrumbLink">{{{breadgrade}}}</span>
+							<span id="breadCrumbSpan">
+								&nbsp;<img src="" />&nbsp;								
+							</span>
+
+							<span id="breadCrumbLink">
+								<!-- <span id="chName"> -->
+									{{{breadsub}}}
+								<!-- </span> -->
+							</span>
+
+							<span id="breadCrumbSpan">
+								&nbsp;<img src="" />&nbsp;								
+								
+							</span>
+							<span id="breadCrumbSpan">{{{breadname}}}</span>
+						</script>
+					</div>
+					<div id="activity-page-lesson-ex-tab">
+						<div id="activity-page-lesson-tab">
+							<script type="text/x-handlebars-template" id="lessonTab" >
+								<button class="">
+									<img class="learnbtn_img learnbtn" src="" />
+									<span class="linkClick nav_read_ex_div" data-href="{{lesson}}">{{lessonTitle}}</span>
+								</button>
+							</script>
+						</div>
+						<div id="activity-page-exercise-tab">
+							<script type="text/x-handlebars-template" id="exerciseTab" >
+								{{#if exercise}}
+								<button class="">
+									<img class="learnbtn_img exercisebtn" src="" />
+									<span class="linkClick nav_read_ex_div" data-href="{{exercise}}">{{title}}</span>
+								</button>
+								{{/if}}
+							</script>
+						</div>
+					</div>
+					<div id="activity-page-lang-switch">
+						<span class="nav-pills">
+							<a href="?lang=np" style="font-family: 'poppins' !important;" data-lang="np"><span style="font-family: 'poppins' !important;">ने</span></a>
+						  </span>
+						  <span class="label"> | </span>
+						  <span class="nav-pills">
+							<a href="?lang=en" style="font-family: 'poppins' !important;" data-lang="en">En</a>
+						  </span>
+					</div>
+
+					<div id="activity-page-help-text">
+						<span class="glyphicon glyphicon-question-sign" title="help"></span>
+					</div>
+					<!-- help text Handlebars script -->
+					<script type="text/x-handlebars-template" id="helpTextForNav">
+						<div class="helpNavback">
+							<div class="helpPopUpMe">
+								<div class="helpTitle">{{{title}}}
+									<div id="closeHelpNav"><span class="glyphicon glyphicon-remove-circle"></span></div>
+								</div>
+								<div class="brief-desc">
+									{{#each helpNav}}
+										<div class="helpNavtitle">
+											<div>{{{helptitle}}} : </div>
+											<div>{{{helptext}}}</div>
+										</div>
+									{{/each}}
+								</div>
+								<div class="howToNav">{{how}}</div>
+								<div class="lesExTab">
+									{{#each lessonNav}}
+										<div class="lessonNav lesExChilds">
+											<div class="lessontitle lesEx-title">{{lessontitle}}:</div>
+											<div class="lessontext lesEx-text">{{{lessontext}}}</div>
+										</div>
+									{{/each}}
+									{{#each exeNav}}
+										<div class="exeNav lesExChilds">
+											<div class="exetitle lesEx-title">{{exetitle}} :</div>
+											<div class="exetext lesEx-text">{{{exetext}}}</div>
+										</div>
+									{{/each}}
+									{{#each selfNav}}
+									<div class="selfNav lesExChilds">
+										<div class="selftitle lesEx-title">{{selftitle}} :</div>
+										<div class="selftext lesEx-text">{{{selftext}}}</div>
+									</div>
+									{{/each}}
+									<div  class="lesExChilds"><br/></div>
+								</div>
+							</div>
+						</div>
+					</script>
+				</div>
+			</header>
+
+			<!-- POPUP handelbars START -->
+			<script type="text/x-handlebars-template" id="activity_guide_popup">
+				<p class="main_heading">{{activityguidetext}}</p>
+				<img class="ag_icon" src="">
+				<img class="cross_ag" src="">
+			<div class="activityguide_popup">
+				<p class="headings">{{about_the_lesson_heading}}:</p>
+					<p class="contents">{{about_the_lesson_content}}</p></br>
+
+					<p class="headings">{{curricular_requirement_heading}}:</p>
+						<p class="contents">{{curricular_requirement_content}}</p></br>
+
+				<p class="headings">{{prerequisites_heading}}:</p>
+				<p class="contents">
+					<p>{{{prerequisites_content}}}</p>
+					<ul class="link_prequesite_class">
+							{{#each prerequisites_content_links_list}}
+									 <li class="list_style"><a>{{this}}</a></li>
+							{{/each}}
+					</ul>
+				</p></br>
+
+				<p class="headings">{{lesson_guidelines_heading}}:</p>
+					<p class="contents">
+							<p>{{{lesson_guidelines_content_paragraph}}}</p>
+						<ul>
+								{{#each lesson_guidelines_content_list}}
+										 <li type="circle">{{{this}}}</li>
+								{{/each}}
+						</ul>
+					</p>
+				</br> 
+						
+				 {{!Assesment Strategeis }}
+				   {{#if  is_assesment_content}}
+                        <p class="headings">{{assesment_strategies_heading}}:</p>
+                          <p class="contents">
+                              <p>{{{assesment_strategies_paragraph}}}</p>
+                            <ul>
+                                {{#each assesment_strategies_list}}
+                                     <li class="list_style">{{{this}}}</li>
+                                {{/each}}
+                            </ul>
+                          </p>
+                        <br/>
+						{{/if}}
+
+				<p class="headings">{{related_activities_heading}}:</p>
+					<p class="contents">
+							<p>{{{related_activities_content_paragraph}}}</p>
+							<ul>
+									{{#each related_activities_content_list}}
+											 <li class="list_style">{{{this}}}</li>
+									{{/each}}
+							</ul>
+						</p>
+					</br>
+
+					<!-- evaluation section commented (uncomment to enable)
+					<p class="headings">{{evaluation_heading}}:</p>
+						<p class="contents">
+								<p>{{{evaluation_content_paragraph}}}</p>
+								<ul>
+										{{#each evaluation_content_list}}
+												 <li class="list_style">{{{this}}}</li>
+										{{/each}}
+								</ul>
+							</p> -->
+			</div>
+			<!-- POPUP handelbars END -->
+		</script>
+
+
+			<div class="main">
+				<!-- this is for the sequence timeline for each page -->
+				<div class="activityguide_popupdiv"></div>
+				<div class="SequenceTimeLine"></div>
+				<button class="nakkalibutton1" >nextbutton</button>
+				<button class="nakkalibutton2" >prevbutton</button>
+				<div class="mainBox">
+					<center>
+						<table width="80%" height="100%">
+							<tr>
+								<td>
+								<div class="progress progress-striped active">
+									<div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+										<span class="sr-only">45% Complete</span>
+									</div>
+								</div></td>
+							</tr>
+						</table>
+					</center>
+				</div>
+			</div>
+			<!-- footer is here -->
+			<footer id="activity-page-footer" >
+				<div id="activity-page-footer-container">
+					<div id="activity-page-list-page">
+						<!-- <div class="pageHeadInside">-->
+						<div id="activity-page-list-page-container">
+							<script id="sectionFooter" type="text/x-handlebars-template">
+								<span data-href="{{link3}}"  class="{{allmyclass}} {{clas}}">{{sectionTitle}}</span>
+							</script>
+
+							<script id="headmyfooterPrev" type="text/x-handlebars-template">
+								<div  class="headfooterPages" id="headPageNum">
+									{{#if link1}}
+										<div class="headfooter-prev prev">
+											<span class="glyphicon glyphicon-arrow-left linkClick" data-href="{{link1}}" title="{{prevToolPage}}"></span>
+										</div>
+									{{/if}}
+									{{#each orthbx}}
+										<div class="head-pages-list {{clas2}} linkClick" data-href="{{link4}}">{{pageNumber}}</div>
+									{{/each}}
+									{{#if link2}}
+										<div class="headfooter-next next">
+											<span class="glyphicon glyphicon-arrow-right linkClick" data-href="{{link2}}" title="{{nextToolPage}}"></span>
+										</div>
+									{{/if}}
+								</div>
+							</script>
+
+							<script type="text/x-handlebars-template" id="exerciseTab2">
+								<div class="exerciseTab2">
+									{{#if link1}}
+										<div class="headfooter-prev prev">
+											<span class="glyphicon glyphicon-arrow-left linkClick arrowLine" data-href="{{link1}}" ></span>
+										</div>
+									{{/if}}
+									{{#each title}}
+										<span class="linkClick {{{isActive}}}" data-href={{link}}>{{no}}</span>
+									{{/each}}
+									{{#if link2}}
+										<div class="headfooter-next next">
+											<span class="glyphicon glyphicon-arrow-right linkClick arrowLine" data-href="{{link2}}" ></span>
+										</div>
+									{{/if}}
+								</div>
+							</script>
+						</div>
+					</div>
+					<div id="activity-page-navigation-controller">
+						<div id='activity-page-refresh-btn'>
+							<img class="footer_refresh_btn" src="images/activity/refresh_blue_new.png" alt="OLE Nepal Logo">
+						</div>
+						<div id='activity-page-prev-btn'>
+							<img id='activity-page-prev-btn-disabled' src="images/activity/next_button.png" alt="OLE Nepal Logo">
+							<img id='activity-page-prev-btn-enabled' src="images/activity/next_button.png" alt="OLE Nepal Logo">
+						</div>
+						<div id='activity-page-slide-counter'>
+							<span id="activity-page-highlight-current"><span id="ole-pg-no"></span> <span id="activity-page-current-slide"></span></span> / <span id="activity-page-total-slide"></span>
+						</div>
+						<img class="maximizebutton" src="images/maximize.png" >
+						<div id='activity-page-next-btn'>
+							<img id='activity-page-next-btn-disabled' src="images/activity/prev_button.png" alt="OLE Nepal Logo">
+							<img id='activity-page-next-btn-enabled' class="animated tada" src="images/activity/prev_button.png" alt="OLE Nepal Logo">
+							<img id='activity-page-continue-btn' class="animated tada" src="images/activity/continue.png" alt="OLE Nepal Logo">
+							<img id='activity-page-finish-btn' class="animated tada" src="images/activity/finish.png" alt="OLE Nepal Logo">
+						</div>
+					</div>
+					<!-- <div class="" id="footerMyPage"> -->
+						<!-- roshan on -->
+						<!-- pageEnd notification div -->
+						<!-- <div class="footerNotification">
+							<button class="restartPage" ></button>
+							<p class="notificationMsg"></p>
+							<button class="continuePage"></button>
+						</div> -->
+						<!-- roshan off -->
+					<!-- </div> -->
+				</footer>
+			</div>
+		</div>
+		<script type="text/x-handlebars-template" id="activitycomplete-template">
+			{{!--This is comment link to stylesheet for this template--}}
+			{{{activitycompletestylelink}}}
+			<div class="activityCompletePage">
+			<div>
+			<div>
+			<h3 class="activityCompleteHeading">{{activitycompleteheading}}</h3>
+			<p class="activityCompleteNotice1">{{activitycompletenotice1}}</p>
+			<a href="{{activitycompletemenulink}}" class="activityCompleteCheckMenu">{{activitycompletecheckmenu}}</a>
+			<p class="activityCompleteRestartNotice">{{activitycompleterestartnotice}}</p>
+			<a href="{{activitycompletechapterlink}}" target="_parent" class="activityCompleteRestartChapter">{{activitycompleterestartchapter}}</a>
+			<a href="{{activitycompleteexerciselink}}" target="_parent" class="activityCompleteRestartExercise">{{activitycompleterestartexercise}}</a>
+			</div>
+			</div>
+			</div>
+		</script>
+
+		<!--####################################################################################
+		Sequence of scripts to put :
+		1.) *jquery-1.11.3.min.js* -> you know it obvious its what everything in our project uses.
+		2.) *bootstrap.min.js* -> all the bootstrap functions should be loaded first
+		if any.
+		3.) *handlebars-3.0.3.js* -> handlebars templates are decoded at runtime to
+		make dom available.
+		4.) *ole.lib.js* -> this script file has got global ole object that contains methods and functions to be called by the ole.start.js file.
+		5.) *ole.activity.js* -> the data required for the dom from config and specific activity data xml file are loaded from here . Global variables for currentgrade, subject, level and language are initialized and decleared here, which is also used in start.js file.
+		6.) *start.js* -> if present, menu is populated in this script. In addition to this, language switch event handler is defined here. Also, the global variables for currentgrade, subject, level and language decleared in ole.activity.js are used here. so make sure ole.activity.js loads before this.
+		#####################################################################################-->
+
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script>
+			$('.activityguide_popupdiv').hide(0); // hide activityguide_popupdiv by default
+		</script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/handlebars-3.0.3.js"></script>
+		<script type="text/javascript" src="js/ole.lib.js" defer></script>
+		<script type="text/javascript" src="js/ole.activity.js" defer></script>
+		<!-- <script type="text/javascript" src="js/ole.term_condition.js" defer></script> -->
+		<script type="text/javascript" src="js/start.js" defer></script>
+		<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js" defer></script>
+		<script type="text/javascript" src="js/ole.exelib.js"></script>
+		<script type="text/javascript" src="js/buzz.min.js"></script>
+		<script type="text/javascript" src="js/fontChange.js"></script>
+		<script type="text/javascript" src="js/preloadjs-0.6.2.min.js"></script>
+		<script type="text/javascript" src="js/soundjs-0.6.2.min.js"></script>
+		<!-- addition made by ashish to control audio in poem template-->
+		<script type="text/javascript" src="js/nep_audio_ctrl.lib.js"></script>
+		<!-- addition made by bishal to control audio in poem template for soundjs libray because buzz library givs error in mobile view-->
+		<script type="text/javascript" src="js/nep_audio_ctrl.lib1.js"></script>
+		<!-- addition made by Ashish for vocabulary -->
+		<script src="js/jquery.csv.js" type="text/javascript"></script>
+		<script src="js/vocab.lib.js" type="text/javascript"></script>
+		<!-- addition for vocabulary complete -->
+		<script>
+			var tree = "\n  ___  _     _____   _   _";
+			console.log(tree);
+			// history.go(0);
+
+			 // newfunction starts
+				$('.nakkalibutton1').click(() => {
+				$('#activity-page-next-btn-enabled').trigger("click");
+				console.log('clickeddnakkali1');
+				})
+				$('.nakkalibutton2').click(() => {
+				$('#activity-page-prev-btn-enabled').trigger("click");
+				console.log('clickeddnakkali2');
+				})
+				// newfunction ends
+		</script>
+	</body>
+</html>

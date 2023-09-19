@@ -1,0 +1,184 @@
+.activity_container {
+    width      : 100%;
+    height     : 100%;
+    position   : relative;
+    overflow   : hidden;
+    font-size  : 1.3em;
+    background : #fff;
+    box-shadow : inset 0 0 30px #f2f2f2;
+}
+
+.activity_container, .activity_container * {
+    position : relative;
+    margin   : 0;
+    padding  : 0;
+}
+
+.activity_container .nextBtn{
+    display: none;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 7%;
+    height: 10%;
+    z-index: 10;
+}
+
+.activity_container .prevBtn{
+    display  : none;
+    position : absolute;
+    bottom   : 0%;
+    left     : 0%;
+    width    : 7%;
+    height   : 10%;
+    z-index  : 10;
+}
+
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+p{
+    margin: 0;
+}
+.contentwithbg {
+    width: 100%;
+    height: 100%;
+    background: url("../images/introduction-slide.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.nextBtn {
+    display: none;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 7%;
+    height: 10%;
+    z-index: 1000!important;
+}
+
+.prevBtn {
+    display: none;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 7%;
+    height: 10%;
+    z-index: 1000!important;
+}
+
+.myNextStyle {
+    cursor: pointer;
+    background-image: url("../../../../../../images/arrows/arrow.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.myNextStyle:hover {
+    background-image: url("../../../../../../images/arrows/arrow_hover.png");
+}
+
+.myNextStyle:active {
+    background-image: url("../../../../../../images/arrows/arrow_active.png");
+}
+
+.myPrevStyle {
+    cursor: pointer;
+    background-image: url("../../../../../../images/arrows/arrow_prev.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.myPrevStyle:hover {
+    background-image: url("../../../../../../images/arrows/arrow_hover_prev.png");
+}
+
+.myPrevStyle:active {
+    background-image: url("../../../../../../images/arrows/arrow_active_prev.png");
+}
+
+.board {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.vertical-horizontal-center {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.vertical-center {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: center;
+}
+
+.coverboardfull {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div.generalTemplateblock {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    /*border   : 1px solid red; */
+}
+
+div.headerblock {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 20%;
+    background-color: #E3D0DA;
+    color: #CE00A7;
+
+    /*border   : 1px solid red;*/
+}
+
+div.generalTemplateblock[data-templatecontains='hasheaderblock'] div.contentblock {
+    top: 20%;
+    height: 80%;
+    position: absolute;
+    width: 100%;
+}
+
+div.generalTemplateblock[data-templatecontains='hasonlycontent'] div.contentblock {
+    top: 0%;
+    height: 100%;
+}
+@font-face {
+    font-family: sniglet;
+    src: url("../../../../../fonts/sniglet.ttf");
+}
+body {
+
+    font-family: 'Sniglet !important';
+
+}
+
+/*============ exercise template ===================
+==================================================== */

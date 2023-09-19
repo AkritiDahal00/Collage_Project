@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello, World!</title>
+  <link rel="stylesheet" href="./pyscript.css" />
+  <script defer src="./pyscript.js"></script>
+  <py-config>
+    - autoclose_loader: true
+    - runtimes:
+      -
+        src: "./pyodide/pyodide.js"
+        name: pyodide-0.20
+        lang: python
+  </py-config>
+</head>
+<body>
+    <py-env>
+        - matplotlib
+        - numpy
+        - bokeh
+    </py-env>
+    <py-script>   
+        import matplotlib.pyplot as plt
+        import numpy as np
+
+        time = np.linspace(0, 2 * np.pi, 100)
+        plt.plot(time, np.sin(time))
+        plt
+    </py-script>
+    <py-script id="main">
+        import json
+        import pyodide
+        import numpy as np
+
+        #from js import Bokeh, console, JSON
+
+        from bokeh.embed import json_item
+        from bokeh.plotting import figure, show, curdoc
+        from bokeh.models import FixedTicker, Segment, Circle, Text, Arrow, OpenHead, NormalHead, Range1d
+        from bokeh.models import ColumnDataSource, CustomJS, CustomJSTransform
+        from bokeh.models import Button, Slider, NumericInput, Dropdown, Div
+        from bokeh.layouts import column, row
+        
+        from bokeh.resources import CDN
+        
+        #define starting point and take the random walk according to number of steps
+        y_vert=0; x0 = 0; 
+        num_steps = 3; alphabetLBS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        # Set the range of the number line
+        y_min=-2; y_max=2; x_min = -10; x_max = 10;
+        
+        ##### WIDGETS FOR INTERACTIVITY #####
+        # Add the animate button
+        animate_button = Button(label="Animate",button_type='warning')
+        # Add the reset button
+        reset_button = Button(label="Reset",disabled=True,button_type='danger')
+        # user input widgets
+        distance_input = NumericInput(value=None,low=x_min, high=x_max, background="orange",
+                                      title="distance = ",placeholder="Enter distance")
+        displacement_input = NumericInput(value=None,low=x_min, high=x_max, background="orange",
+                                          title="displacement = ",placeholder="Enter displacement")
+        
+        directions_list = [("East", "dir_East"), ("West", "dir_West"), ("North", "dir_North"), ("South", "dir_South")]
+        direction_dropdown = Dropdown(label="Select Direction", button_type="warning", menu=directions_list)
+        submit_button = Button(label="Submit",disabled=False,button_type='primary')
+        ##input instruction###
+        user_instr_div = Div(text="""<h2 style="text-align: center;">How much distance and displacement was covered?</h2>""", height=40,visible=True)
+        #### USER FEEDBACK####
+        user_incorrect_div = Div(text="""Your distance or displacement is incorrect. Try again!""", height=100,visible=False)
+        user_correct_div = Div(text="""Great job! Click reset to play and animate again.""", height=100,visible=False)
+        user_inputIncorrect_div = Div(text="""Enter both distance and displacement and try again.""", height=100,visible=False)
+        #no of steps for random walk (2 stage vs 3 stage vs ....for different levels)
+        no_steps_input = NumericInput(value=3,low=2, high=5, background="cyan",
+                                      title="No steps = ",placeholder="Enter no of steps for random walk")
+        no_steps_slider = Slider(start=2, end=6, value=3, step=1, title="No steps in 1D walk:")
+        ###################
+        
+        # Create the figure
+        p = figure(name="main_plot",plot_width=800, plot_height=200, x_range=(x_min, x_max), y_range=(y_min, y_max), toolbar_location=None)
+        
+        # Draw the number line
+        p.line([x_min, x_max], [y_vert, y_vert], line_width=2)
+        
+        # Draw tick markers and labels
+        p.xaxis.ticker = FixedTicker(ticks=np.arange(x_min, x_max+1))
+        p.xaxis.major_label_overrides = {i: str(i) for i in range(x_min, x_max+1)}
+        tick_height = 0.2
+        for tick in range(x_min, x_max+1):
+            tick_line = Segment(x0=tick, x1=tick, y0=y_vert-tick_height/2, y1=y_vert+tick_height/2, 
+                                line_color="orange", line_width=2)
+            p.add_glyph(tick_line)
+            
+        tick_xs = list(range(x_min, x_max+1))
+        tick_ys = [y_vert]*len(tick_xs)
+        # Draw tick labels
+        p.text(tick_xs, tick_ys, text=[str(i) for i in tick_xs], text_align='center', y_offset=10,
+               text_baseline='top', text_font_size='10pt')
+        
+        # Hide the axes and display the grid
+        p.xgrid.visible = True
+        p.ygrid.visible = False
+        p.axis.visible = False
+        
+        # Define the data sources for the points and arrows
+        source_points = ColumnDataSource(data=dict(x=[], y=[], color=[], label=[]))
+        source_arrows = ColumnDataSource(data=dict(x_start=[], y_start=[], x_end=[], y_end=[]))
+        # Add the glyphs to the plot
+        p.circle(x='x', y='y', color='color', size=10, source=source_points)
+        p.text(x='x', y='y', text='label', source=source_points,text_align='center', text_baseline='top', 
+               text_font_size='15pt',y_offset=25,text_color='orange')
+        arrows = Arrow(end=NormalHead(fill_color="orange", line_width=4, size=20),
+                           x_start='x_start', y_start='y_start', x_end='x_end', y_end='y_end',
+                           source=source_arrows)
+        p.add_layout(arrows)
+        
+        
+        # Define the JavaScript callback for the animate button
+        animate_callback = CustomJS(args=dict(source=source_points, source_arrows=source_arrows, 
+                                              no_steps_slider=no_steps_slider,alphabetLBS=alphabetLBS,
+                                              reset_button=reset_button,animate_button=animate_button), code="""
+            animate_button.disabled = true; //disable after animation button is clicked
+            const data = source.data;
+            const x = data['x'];
+            const y = data['y'];
+            const color = data['color'];
+            const label = data['label'];
+            const arrows_data = source_arrows.data;
+            const num_steps = no_steps_slider.value;
+            // define the starting point
+            let prev_x = 0;
+        
+            // generate random steps
+            let steps = [0];
+            for (let i = 1; i < num_steps; i++) {
+                const step = Math.floor(Math.random() * 11) - 5;
+                steps.push(step);
+            }
+        
+            // generate the points and labels
+            let unique_x_values = new Set(); // new line
+               
+            // define variables to store the distance and displacement
+            let distance = 0;
+            let displacement = 0;
+            let prev_point = {x: 0, y: 0};
+        
+            // generate the points and labels
+            const points = steps.map(step => {
+                let next_x = prev_x + step;
+                while (unique_x_values.has(next_x)) {
+                    const step = Math.floor(Math.random() * 11) - 5;
+                    next_x = prev_x + step;
+                }
+                unique_x_values.add(next_x);
+                prev_x = next_x;
+        
+                // calculate the distance and displacement
+                const next_point = {x: next_x, y: 0};
+                const segment_distance = Math.sqrt(Math.pow(next_point.x - prev_point.x, 2) + Math.pow(next_point.y - prev_point.y, 2));
+                distance += segment_distance;
+                displacement += next_point.x - prev_point.x;
+                prev_point = next_point;
+        
+                return next_x;
+            });
+            const labels = points.map((point, i) => {
+                const letterIndex = i % alphabetLBS.length;
+                return alphabetLBS[letterIndex];
+            });
+            
+        
+            
+            const start = Date.now();
+            let i = 0;
+            const animate = () => {
+                if (i >= points.length) {
+                    reset_button.disabled = false; //re-enable reset after animation is played
+                    
+                    return;
+                }
+                
+                const elapsed = Date.now() - start;
+                if (elapsed < 500 * (i + 1)) {
+                    requestAnimationFrame(animate);
+                    return;
+                }
+                x.push(points[i]);
+                y.push(0);
+                if (i > 0) {
+                    const prev_x = x[i-1];
+                    const prev_y = y[i-1];
+                    const curr_x = x[i];
+                    const curr_y = y[i];
+                    const arrow_dist = 0.25*i;
+                    arrows_data.x_start.push(prev_x);
+                    arrows_data.y_start.push(prev_y+arrow_dist);
+                    arrows_data.x_end.push(curr_x);
+                    arrows_data.y_end.push(curr_y+arrow_dist);
+                    source_arrows.change.emit();
+                }
+                if (i == 0) {
+                    color.push('red');
+                } else {
+                    color.push('blue');
+                }
+                label.push(labels[i]);
+                source.change.emit();
+                i++;
+                
+                requestAnimationFrame(animate);
+        
+            };
+            animate();
+            
+        """)
+        
+        
+        
+        # Define the JavaScript callback for the buttons
+        
+        # Define the JavaScript callback for the reset button
+        reset_callback = CustomJS(args=dict(source=source_points,source_arrows=source_arrows,
+                                            no_steps_slider=no_steps_slider,alphabetLBS=alphabetLBS,
+                                            animate_button=animate_button,reset_button=reset_button,
+                                           distance_input=distance_input,displacement_input=displacement_input,
+                                             user_incorrect_div=user_incorrect_div,user_correct_div=user_correct_div,
+                                            user_inputIncorrect_div=user_inputIncorrect_div), code="""
+                source.data.x = [];
+                source.data.y = [];
+                source.data.color = [];
+                source.change.emit();
+                source_arrows.data.x_start = [];
+                source_arrows.data.y_start = [];
+                source_arrows.data.x_end = [];
+                source_arrows.data.y_end = [];
+                source_arrows.change.emit();
+                animate_button.disabled = false; // renable animate button after clicking
+                reset_button.disabled = true; //disable reset button again
+                distance_input.value = null;
+                displacement_input.value = null;
+                no_steps_slider.value = 3;
+                user_inputIncorrect_div.visible = false;
+                user_incorrect_div.visible = false;
+                user_correct_div.visible = false;
+        """)
+        
+        
+        
+        
+        #callback for submit button, uses source_points to calculate distance and displacement
+        submit_callback = CustomJS(args=dict(source_points = source_points,
+                                             distance_input=distance_input,displacement_input=displacement_input,
+                                             direction_dropdown=direction_dropdown,
+                                            user_incorrect_div=user_incorrect_div,user_correct_div=user_correct_div,
+                                            user_inputIncorrect_div=user_inputIncorrect_div), code="""
+                const points_data = source_points.data; //get points 
+                const distance = points_data.x.reduce((acc, val, index, arr) => {
+                          if (index === 0) return acc;
+                          else return acc + Math.abs(val - arr[index - 1]);
+                          }, 0); 
+                const displacement = points_data.x[points_data.x.length - 1] - points_data.x[0];
+                const user_distance = distance_input.value;
+                const user_displacement = displacement_input.value;
+                const user_direction = direction_dropdown.value;
+        
+                if (user_distance == null || user_displacement == null) {
+                    user_inputIncorrect_div.visible = true;
+                    user_incorrect_div.visible = false;
+                    user_correct_div.visible = false;
+                    //alert('Please enter both distance and displacement.');
+                    return;
+                }
+                if (user_distance != distance || user_displacement != displacement) {
+                    user_inputIncorrect_div.visible = false;
+                    user_incorrect_div.visible = true;
+                    user_correct_div.visible = false;
+                    //alert('The distance or displacement is incorrect.');
+                    return;
+                }
+                user_inputIncorrect_div.visible = false;
+                user_incorrect_div.visible = false;
+                user_correct_div.visible = true;
+                //alert('Correct! The ' + user_direction + ' direction was chosen.');
+                // output the distance and displacement to the console
+                console.log('distance new:', distance);
+                console.log('displacement new:', displacement);
+        """)
+        
+        # Attach the callbacks to the buttons
+        animate_button.js_on_click(animate_callback)
+        reset_button.js_on_click(reset_callback)
+        submit_button.js_on_click(submit_callback)
+        
+        # add plot and buttons to a layout
+        anim_layout = column(no_steps_slider,p, row(animate_button, reset_button,sizing_mode='scale_width'))
+        
+        
+        user_input_controls = column(row(distance_input,displacement_input),sizing_mode='scale_width')#,direction_dropdown))
+        user_feedback_divs = column(user_inputIncorrect_div,user_incorrect_div,user_correct_div,sizing_mode='scale_width')
+        
+        all_1Dwalk = column(anim_layout,user_instr_div,user_input_controls,user_feedback_divs,submit_button)
+
+        #show(all_1Dwalk)
+        curdoc().add_root(all_1Dwalk)
+        #p_json = json.dumps(json_item(all_1Dwalk, "media-container"))
+
+        #Bokeh.embed.embed_item(JSON.parse(p_json))
+      </py-script>
+      <div>
+        {{ embed(roots.main_plot) }}
+    </div>
+</body>
+</html>

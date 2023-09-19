@@ -1,0 +1,498 @@
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-172822248-2"
+    ></script> -->
+    <!-- <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'UA-172822248-2')
+    </script> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <title>e-learning</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- added to load data directly from server TO REMOVE DURING DEPLOYMENT-->
+    <meta http-equiv="“Pragma”" content="”no-cache”" />
+    <meta http-equiv="“Expires”" content="”-1″" />
+    <meta http-equiv="“CACHE-CONTROL”" content="”NO-CACHE”" />
+    <!-- added to load data directly from server ends -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/homework.png"
+    />
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="images/ole-logo.png"> -->
+    <title>eLearning</title>
+    <!--  <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/sweetalert.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/templetestyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/font_collection.css" />
+    <style type="text/css">
+      @font-face {
+        font-family: ubuntu;
+        /*src: url(fonts/kalimati.ttf); second pref*/
+        /*src: url(fonts/kokila_0.ttf); /*size issue and other minor issues*/
+        /*src: url(fonts/Lohit-Nepali.ttf); /*third pref*/
+        src: url(fonts/mangal.ttf);
+        /* src: url(fonts/madan.ttf); */
+        /*src: url(fonts/jagamanjari.ttf);*/
+      }
+      @font-face {
+        font-family: madan;
+        /*src: url(fonts/kalimati.ttf); second pref*/
+        /*src: url(fonts/kokila_0.ttf); /*size issue and other minor issues*/
+        /* src: url(fonts/Lohit-Nepali.ttf);  */
+        /* src: url(fonts/mangal.ttf); */
+        src: url(fonts/madan.ttf);
+        /* src: url(fonts/jagamanjari.ttf); */
+      }
+
+      body {
+        /* background: #3b8fa3; */
+        background-image: url('');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: poppins;
+      }
+
+      body:lang(np),
+      body:lang(np) * {
+        font-family: ubuntu !important;
+      }
+
+      body:lang(np) .glyphicon {
+        font-family: 'Glyphicons Halflings' !important;
+      }
+
+      .logocontainer {
+        left: -2% !important;
+      }
+      .subject .langswitchcontainer {
+        position: absolute;
+        top: 26%;
+        right: -1%;
+        font-size: 1.1em;
+        font-weight: bold;
+      }
+      .langswitchcontainer > span > a:lang(np) {
+        font-family: 'poppins' !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="teacherNotePop"></div>
+    <div class="startPageVal">
+      <header style="background: #fff">
+        <div class="navbar colorPurple" role="navigation">
+          <div class="container">
+            <div
+              class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nav navbar-nav subject"
+            >
+              <div
+                class="startPageBreadCrum col-lg-5 col-md-5 col-sm-4 col-xs-5 text-left"
+              >
+                <span class="bread_crumb" id="breadcrumblink">
+                  <script type="text/x-handlebars-template" id="breadcrumbs">
+                    <span class='breadCrumbLink'>{{{breadgrade}}}</span>
+                    <span class='breadCrumbSpan arrow_top'>
+                      &nbsp;
+                      <img src='' />
+                      &nbsp;
+                    </span>
+                    <span class='breadCrumbLink'>{{{breadsub}}}</span>
+                    <span class='breadCrumbSpan arrow_top'>
+                      &nbsp;
+                      <img src='' />
+                      &nbsp;
+                    </span>
+                    <span class='breadCrumbSpan'>{{{breadname}}}</span>
+                  </script>
+                </span>
+              </div>
+
+              <div class="logocontainer">
+                <a href="index.html"
+                  ><img
+                    src="images/homework.png"
+                    class="img-responsive col-centered"
+                    draggable="false"
+                /></a>
+              </div>
+
+              <div class="langswitchcontainer" id="langSwitchNew">
+                <span class="nav-pills">
+                  <a
+                    href="?lang=np"
+                    style="font-family: 'poppins' !important"
+                    data-lang="np"
+                    ><span style="font-family: 'poppins' !important"
+                      >ने</span
+                    ></a
+                  >
+                </span>
+                <span class="label"> | </span>
+                <span class="nav-pills">
+                  <a
+                    href="?lang=en"
+                    style="font-family: 'poppins' !important"
+                    data-lang="en"
+                    >En</a
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- <menu class="container navbar-fixed-top ">
+    <div class="menu col-md-9 col-sm-9 col-xs-9">
+        <ul class="col-sm-3 menuSubjects">
+            <script type="text/x-handlebars-template" id="menu">
+            {{#each this}}
+                <li class="hoverd clicky" data-color="{{color}}" data-title="{{titleKey}}" data-href="{{link}}" >
+                   {{title}}
+                    <span class="pull-right"><span class=" btn-sm glyphicon glyphicon-chevron-right"></span></span>
+                </li>
+            {{/each}}
+
+            </script>
+             <script type="text/x-handlebars-template" id="exerciseMenu">
+
+                {{#each this}}
+                    <li class="clicky" data-color="{{color}}" data-href="subjects.html">
+                        <h4>{{exercise}}</h4>
+                    </li>
+                {{/each}}
+            </script>
+        </ul>
+        <div class="menuActivities">
+
+            <ul class="thumbnail col-md-6">
+
+                <h3 class="col-md-12" id="thumbTitle">Title</h3>
+                 <script type="text/x-handlebars-template" id="menu-temp-title">
+                 <p>{{title}}</p>
+                 </script>
+
+                <script type="text/x-handlebars-template" id="list-menu-template">
+                    {{#each this}}
+                        <li class="clicky" data-href="{{this.link}}">{{this.title}}</li>
+                    {{/each}}
+                </script>
+                <div class="liContainer">
+                <span >
+
+                </span>
+                </div>
+            </ul>
+        </div>
+    </div>
+</menu> -->
+
+      <div class="startpagemid">
+        <div class="topRow">
+          <div class="container">
+            <div class="topRow2">
+              <script type="text/x-handlebars-template" id="topRow">
+                <div class='h2StartPage'>
+                  <h2>{{subject}}</h2>
+                </div>
+
+                <!-- level is not required to show for now so removed udpated
+                    code is below the commented part-->
+                <!-- <div class="pull-right ">
+                        <h3>{{activity}} - {{level}}</h3>
+                    </div> -->
+
+                <div class='pull-right'>
+                  <h3>{{activity}}</h3>
+                </div>
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="secondRow container width_change_tab">
+          <script type="text/x-handlebars-template" id="mid">
+
+            <div class="imgout ">
+
+
+              <!-- tab selectors START -->
+              <!-- <ul class="tabs">
+                <div class="list_div">
+                <li class="tab-link current" data-tab="tab-1">
+                    <img class="insideimage1" src="">
+                    {{titleObjectiveText}}
+                </li>
+                {{#if showAG}}
+                <li class="tab-link check" data-tab="tab-2">
+                    <img class="insideimage" src="">
+                    {{activityguidetext}}
+              </li>
+              {{/if}}
+              </div>
+              </ul> -->
+              <!-- tab selectors END-->
+
+                <!-- <p class="learning_objective_tab selected_tab"></p> -->
+                <!-- <p class="activity_guideline_tab unselected_tab"></p> -->
+
+                <!-- TAB1 START -->
+                <!-- <div class="well tab-content-start current" id="tab-1">
+
+                      <ul>
+                          {{#each points}}
+                               <li type="circle">{{{this}}}</li>
+                          {{/each}}
+                      </ul>
+                    <!-- <p class="lngDesc">{{{description}}}</p> -->
+
+                      <!-- <div class ="cref">
+                      	{{#if credits}}
+                           <span class = "credit" onclick = "credits()">Credits</span>
+                         {{/if}}
+                     	&nbsp;
+                     	{{#if references}}
+                            <span class ="reference" onclick = "references()">References</span>
+                        {{/if}}
+                       </div> -->
+                    </div> -->
+                    <!-- TAB1 ENDS -->
+
+
+                    <!-- TAB2 STARTS-->
+                    <div class="well tab-content-start" id="tab-2">
+                      <div class="put_inside">
+                        <p class="headings">{{about_the_lesson_heading}}:</p>
+                          <p class="contents">{{about_the_lesson_content}}</p></br>
+
+
+                          <p class="headings">{{curricular_requirement_heading}}:</p>
+                						<p class="contents">{{curricular_requirement_content}}</p></br>
+
+                        <p class="headings">{{prerequisites_heading}}:</p>
+                          <p class="contents">
+                            <p>{{{prerequisites_content}}}</p>
+                            <ul class="link_prequesite_class">
+                                {{#each prerequisites_content_links_list}}
+                                     <li class="list_style"><a>{{this}}</a></li>
+                                {{/each}}
+                            </ul>
+                          </p></br>
+
+                        <p class="headings">{{lesson_guidelines_heading}}:</p>
+                          <p class="contents">
+                              <p>{{{lesson_guidelines_content_paragraph}}}</p>
+                            <ul>
+                                {{#each lesson_guidelines_content_list}}
+                                     <li type="circle" class="list_style">{{{this}}}</li>
+                                {{/each}}
+                            </ul>
+                          </p>
+                        </br>
+
+                        {{!Assesment Strategeis }}
+                        {{#if  is_assesment_content}}
+                        <p class="headings assesment-heading">{{assesment_strategies_heading}}:</p>
+                          <p class="contents">
+                              <p>{{{assesment_strategies_paragraph}}}</p>
+                            <ul>
+                                {{#each assesment_strategies_list}}
+                                     <li class="list_style">{{{this}}}</li>
+                                {{/each}}
+                            </ul>
+                          </p>
+                        <br/>
+                        {{/if}}
+                        <p class="headings">{{related_activities_heading}}:</p>
+                          <p class="contents">
+                              <p>{{{related_activities_content_paragraph}}}</p>
+                              <ul>
+                                  {{#each related_activities_content_list}}
+                                       <li class="list_style">{{{this}}}</li>
+                                  {{/each}}
+                              </ul>
+                            </p>
+                          </br>
+
+                        <!-- evaluation section commented (uncomment to enable)
+                        <p class="headings">{{evaluation_heading}}:</p>
+                          <p class="contents">
+                              <p>{{{evaluation_content_paragraph}}}</p>
+                              <ul>
+                                  {{#each evaluation_content_list}}
+                                       <li class="list_style">{{{this}}}</li>
+                                  {{/each}}
+                              </ul>
+                            </p> -->
+                      </div>
+                    </div>
+                    <!-- TAB2 CNEND -->
+
+
+                </div>
+            </div>
+
+            <div class="continueStart">
+                <div class="continueStartChild">
+                    <a href="{{link}}"  class="startContinueBtn {{startContinueBtnLang}}">{{startText}}
+
+                        <!-- <img src="{{whatLangVal}}" class="imgsrcContinuestart" draggable="false"/> -->
+                        <!-- <img src="{{whatLangVal2}}"  class="imgsrcContinuehover"draggable="false"/> -->
+                    </a>
+                </div>
+          </script>
+          <div class="footerRow"></div>
+        </div>
+      </div>
+
+      <div class="aboveFooter col-lg-12 col-md-12"></div>
+      <!-- <footer class="footerAct" >
+    <div class="col-sm-12 nextPrev">
+        <div class="prev pull-left">
+            <a href=""><span class="glyphicon glyphicon-backward"></span> Prev Level</a>
+        </div>
+        <div class="next pull-right">
+           <a href="#">Next level <span class="glyphicon glyphicon-forward">
+            </span> </a>
+        </div>
+    </div>
+    <div class="row footerCC col-sm-12 col-lg-12 col-md-12">
+
+        <div class="container">
+
+           <div class="pull-right ">
+
+        </div>
+        </div>
+    </div>
+</footer> -->
+      <div class="bigImageforStartPage">
+        <div class="lefticon">
+          <p>Developed with support from:</p>
+          <img src="images/usaidloogo.png" />
+        </div>
+        <img src="" class="bigimageClass" />
+        <div class="righticon">
+          <p>Approved By:</p>
+          <img src="images/rtilogo.png" />
+        </div>
+      </div>
+    </div>
+
+    <script type="text/x-handlebars-template" id="teachnotes">
+      <div class='teachertemplate'>
+
+        <div class='teach_firstline'>
+          <div>{{subjects}} : {{subjectval}}</div>
+          <div>{{grades}} : {{{gradesval}}}</div>
+          <div id='teachClose'>X</div>
+        </div>
+        <div class='teach_secondline'>{{{nameofchapter}}}</div>
+        <div class='secondTeachBox'>
+          <div class='teach_area'>
+            {{#each teachObj}}
+              <div class='teach_area_obj'>
+                <div class='teachleft'>{{teachleft}} : </div>
+                <div class='teachright'>{{{teachright}}}</div>
+              </div>
+            {{/each}}
+          </div>
+
+          <div class='teach_obj_list'>
+            <div class='teach_area_obj'>
+              <div class='teachleft'>{{teacharea}} : </div>
+              <div class='teachright'>{{{teachareaval}}}</div>
+            </div>
+            <div class='teach_area_obj'>
+              <div class='midteachcenter'>{{{teachareaobj}}} :</div>
+            </div>
+
+            <div class='teach_area_obj'>
+              <div class='teachleft'>{{lessonobj}} : </div>
+              <div class='teachright'>{{{lessonobjval}}}</div>
+            </div>
+
+            {{#each exeteach}}
+              <div class='teach_area_obj'>
+                <div class='teachleft'>{{exeobj}} : </div>
+                <div class='teachright'>{{{exeobjval}}}</div>
+              </div>
+            {{/each}}
+
+            <div class='teach_area_obj'>
+              <div class='teachleft'>{{selfobj}} : </div>
+              <div class='teachright'>{{{selfobjval}}}</div>
+            </div>
+          </div>
+
+          <div class='teach_act_list'>
+            {{#each teach_act_list}}
+              <div class='teach_area_obj'>
+                <div class='teachleft'>{{teachact}} : </div>
+                <div class='teachright'>{{{teachactval}}}</div>
+              </div>
+            {{/each}}
+          </div>
+
+          <div class='teach_last_list'>
+            {{#each teach_last_list}}
+              <div class='teach_area_obj'>
+                <div class='teachleft'>{{teachact}} : </div>
+                <div class='teachright'>{{{teachactval}}}</div>
+              </div>
+            {{/each}}
+          </div>
+          <div class='teach_web_list'>
+            <div class='teach_area_obj'>
+              <div class='teachleft'>{{weblst}} : </div>
+              <div class='teachright'>{{{weblstval}}}</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </script>
+
+    <!--####################################################################################
+    Sequence of scripts to put :
+    1.) *jquery-1.11.3.min.js* -> you know it obvious its what everything in our project uses.
+    2.) *bootstrap.min.js* -> all the bootstrap functions should be loaded first
+    if any.
+    3.) *handlebars-3.0.3.js* -> handlebars templates are decoded at runtime to
+    make dom available.
+    4.) *ole.lib.js* -> this script file has got global ole object that contains methods and functions to be called by the ole.start.js file.
+    5.) *ole.start.js* -> the data required for the dom from config and specific activity data xml file are loaded from here . Global variables for currentgrade, subject, level and language are initialized and decleared here, which is also used in start.js file.
+    6.) *start.js* -> if present, menu is populated in this script. In addition to this, language switch event handler is defined here. Also, the global variables for currentgrade, subject, level and language decleared in ole.start.js are used here. so make sure ole.start.js loads before this.
+ #####################################################################################-->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/handlebars-3.0.3.js"></script>
+    <script type="text/javascript" src="js/ole.lib.js" defer></script>
+    <script type="text/javascript" src="js/ole.start.js" defer></script>
+    <script type="text/javascript" src="js/start.js" defer></script>
+    <script type="text/javascript" src="js/sweetalert.min.js"></script>
+    <script type="text/javascript">
+      // $cssLoader("css/sweetalert.css");
+      // $jsLoader("js/sweetalert.js")
+    </script>
+  </body>
+</html>

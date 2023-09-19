@@ -1,0 +1,1271 @@
+body:lang(np),
+body:lang(np) * {
+  font-family: laila !important;
+}
+
+/* body:lang(en),
+body:lang(en) * {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+} */
+.img-right {
+  width: 36%;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  cursor: pointer;
+  height: 50%;
+  border: 1px solid rgb(2, 151, 151);
+  border-radius: 2em;
+  background-color: #eeeeee;
+  transition: all 0.3s ease-in;
+}
+
+.inputbox-recipent {
+  width: 100%;
+  height: 100%;
+  padding: 0px 27%;
+  border: none;
+  background: none;
+  color: white;
+  outline: none;
+  transform: none;
+}
+
+.recipent {
+  position: absolute;
+  top: 32%;
+  left: 76%;
+  width: 13%;
+  height: 6%;
+  opacity: 0;
+}
+
+.cricket_news2 {
+  width: 36%;
+  position: absolute;
+  top: 25%;
+  left: 57%;
+  cursor: pointer;
+  height: 50%;
+  border: 1px solid rgb(2, 151, 151);
+  border-radius: 2em;
+  background-color: #eeeeee;
+  transition: all 0.3s ease-in;
+}
+
+.weather_news2 {
+  width: 36%;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  cursor: pointer;
+  height: 50%;
+  border: 1px solid rgb(2, 151, 151);
+  border-radius: 2em;
+  background-color: #eeeeee;
+  transition: all 0.3s ease-in;
+}
+
+.textclass {
+  position: absolute;
+  top: -50%;
+  padding: 100%;
+  left: -80%;
+  font-size: 1.2em;
+  color: white;
+
+}
+
+.music {
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+}
+
+.questionblock {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: -100%;
+  /* background-color: #99d8c9; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.img-left {
+  width: 36%;
+  position: absolute;
+  top: 25%;
+  left: 59%;
+  cursor: pointer;
+  height: 50%;
+  border: 1px solid rgb(2, 151, 151);
+  border-radius: 2em;
+  background-color: #eeeeee;
+  transition: all 0.3s ease-in;
+}
+
+.weather_news {
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  border-radius: 2em;
+  height: 100%;
+}
+
+.img-right:hover,
+.img-left:hover {
+  transform: scale(1.05);
+}
+
+.bg_img1 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+.bg_img2 {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
+}
+
+.cricket_news {
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  border-radius: 2em;
+  height: 100%;
+}
+
+.aamai {
+  position: absolute;
+  z-index: 8;
+  height: 54%;
+  top: 47%;
+  left: 61%;
+}
+
+.grull2,
+.grull {
+  left: 45% !important;
+}
+
+.spk-top {
+  cursor: pointer;
+  width: 5%;
+  position: absolute;
+  top: 2%;
+  left: 91%;
+  z-index: 1;
+}
+
+.background_img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.blue-bg {
+  background-color: #90e6ed;
+}
+
+.blue-bg-radial {
+  background-image: radial-gradient(#fff 10%, #7fe1e8 60%);
+}
+
+.image-div,
+.image-div2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+}
+
+.image-div-two {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  top: 0%;
+}
+
+.covertext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6.9vw;
+  color: #fff;
+}
+
+.covertext:lang(en) {
+  font-family: sniglet;
+}
+
+.telephone {
+  position: absolute;
+  top: -5%;
+  left: 0%;
+  height: 50%;
+}
+
+.phone {
+  position: absolute;
+  width: 20%;
+  left: 0%;
+  z-index: 999;
+}
+
+.telv {
+  position: absolute;
+  width: 20%;
+  bottom: 9%;
+  right: 0%;
+  z-index: 1000;
+}
+
+.radio_new {
+  position: absolute;
+  width: 21%;
+  right: 0%;
+  z-index: 100;
+}
+
+.newspaper1 {
+  position: absolute;
+  width: 20%;
+  left: 2%;
+  z-index: 999;
+  bottom: 12%;
+}
+
+.letter {
+  position: absolute;
+  top: 3%;
+  left: 40%;
+  height: 30%;
+}
+
+.radio {
+  position: absolute;
+  top: 0%;
+  right: 4%;
+  height: 35%;
+}
+
+.newspaper {
+  position: absolute;
+  bottom: 25%;
+  left: 2%;
+  height: 33%;
+}
+
+.laptop {
+  position: absolute;
+  bottom: -4%;
+  left: 23%;
+  height: 40%;
+}
+
+.tv {
+  position: absolute;
+  bottom: -2%;
+  right: 22%;
+  height: 33%;
+}
+
+.mobile {
+  position: absolute;
+  bottom: 27%;
+  right: 1%;
+  height: 35%;
+}
+
+.momtalk {
+  position: absolute;
+  top: 45%;
+  left: -4%;
+  height: 55%;
+}
+
+.momtalk-1 {
+  position: absolute;
+  bottom: 5%;
+  right: -1%;
+  height: 55%;
+  transform: rotateY(180deg);
+}
+
+.shorty_girl,
+.shorty_girl_img {
+  position: absolute;
+  bottom: 8%;
+  right: 52%;
+  height: 40%;
+}
+
+.shorty_girl2,
+.shorty_girl_img2 {
+  position: absolute;
+  bottom: 8%;
+  right: 18%;
+  height: 40%;
+}
+
+.hand {
+  position: absolute;
+  top: 71%;
+  right: 88%;
+  height: 9%;
+}
+
+.hand2 {
+  cursor: pointer;
+  z-index: 9;
+  position: absolute;
+  top: 67%;
+  right: 24%;
+  height: 9%;
+}
+
+.fadeInsSuperfast {
+  animation: fadeinFast 1s linear forwards;
+}
+
+.opaque {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio1 {
+  position: absolute;
+  width: 9%;
+  top: 67%;
+  left: 4.5%;
+  cursor: pointer;
+}
+
+.mobile_english {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+}
+
+.call-button {
+  position: absolute;
+  bottom: 11.5%;
+  right: 37.3%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.mobiledialscreen {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 56%;
+  right: 34.5%;
+  width: 14.8%;
+  height: 5.8%;
+  z-index: 3;
+  background: #ffffff;
+}
+
+.recipient {
+  position: absolute;
+  top: 56%;
+  left: 51%;
+  width: 15%;
+  height: 6%;
+  opacity: 0;
+  font-size: 2.5vmin;
+  background-color: #fff;
+}
+
+
+@media screen and (max-width: 670px) {
+  .recipient {
+    font-size: 2vmin;
+  }
+}
+
+.mob_key {
+  width: 6%;
+  height: 5%;
+  position: absolute;
+  transition: background-color 200ms;
+}
+
+
+.background-bg {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.num-0,
+.key_num0 {
+  position: absolute;
+  bottom: 15.5%;
+  right: 37.3%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-1,
+.key_num1 {
+  position: absolute;
+  bottom: 31.5%;
+  right: 42.7%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-2,
+.key_num2 {
+  position: absolute;
+  bottom: 31.5%;
+  right: 37.5%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-3,
+.key_num3 {
+  position: absolute;
+  bottom: 31.5%;
+  right: 31.5%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-4,
+.key_num4 {
+  position: absolute;
+  bottom: 26.5%;
+  right: 42.7%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-5,
+.key_num5 {
+  position: absolute;
+  bottom: 26.5%;
+  right: 37.3%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-6,
+.key_num6 {
+  position: absolute;
+  bottom: 26.5%;
+  right: 31.5%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-7,
+.key_num7 {
+  position: absolute;
+  bottom: 20.5%;
+  right: 42.7%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-8,
+.key_num8 {
+  cursor: pointer;
+  position: absolute;
+  bottom: 20.5%;
+  right: 37.1%;
+  width: 6%;
+}
+
+.clickus {
+  /* width: 6%;
+  height: 5%; */
+  /* position: absolute; */
+  /* top: 57%;
+  left: 70%; */
+  transition: background-color 200ms;
+}
+
+.num-9,
+.key_num9 {
+  position: absolute;
+  bottom: 20.5%;
+  right: 31.5%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.clickMe {
+  cursor: pointer;
+}
+
+.number-eraser,
+.key_back {
+  position: absolute;
+  top: 56%;
+  right: 31.5%;
+  width: 5%;
+  cursor: pointer;
+}
+
+.handtocall {
+  position: absolute;
+  bottom: 7%;
+  right: 37.3%;
+  height: 9%;
+  cursor: pointer;
+}
+
+.man-talking {
+  position: absolute;
+  width: 20%;
+  left: 12%;
+  top: 26%
+}
+
+.girl-talking {
+  position: absolute;
+  width: 16%;
+  left: 72%;
+  top: 26%;
+}
+
+.spBox-4 {
+  position: absolute;
+  top: 9% !important;
+  left: 20%;
+}
+
+.spBox-5 {
+  position: absolute;
+  top: 8% !important;
+  right: 22%;
+}
+
+.background_rb {
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+  height: 100%;
+}
+
+.fadeInsSuperfast {
+  animation: fadeinFast 1s linear forwards;
+}
+
+@keyframes fadeinFast {
+  100% {
+    opacity: 1;
+  }
+}
+
+.tv_bg {
+  height: 100%;
+  width: 100%;
+}
+
+.handtocall2 {
+  position: absolute;
+  bottom: 65%;
+  right: 19.3%;
+  height: 9%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.correct-sign,
+.correct-sign2,
+.wrong-sign1 {
+  z-index: 999;
+  position: absolute;
+  width: 9%;
+  top: 76%;
+  left: 71%;
+}
+
+.coverpage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+}
+
+.correct-sign1 {
+  z-index: 999;
+  position: absolute;
+  width: 12%;
+  top: 71%;
+  left: 19%;
+}
+
+
+.wrong-sign,
+.wrong-sign2 {
+  position: absolute;
+  top: 76%;
+  right: 71%;
+  height: 13%;
+
+}
+
+.radhatalk-1 {
+  position: absolute;
+  bottom: 10%;
+  left: 6%;
+  height: 25%;
+  transform: rotateY(180deg);
+}
+
+.speechbox {
+  transition: linear 2s ease-in;
+}
+
+.spbox {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  width: 36%;
+  transition: all 2s ease-in;
+}
+
+.right_block {
+  position: absolute;
+  width: 24%;
+  height: 100%;
+  background-color: rgb(213 182 225);
+  z-index: 99;
+  top: 0;
+  opacity: 0.8;
+  border: 0.5px solid #a316ad;
+  right: 0%;
+}
+
+.phone_spbox {
+  left: 14%;
+  z-index: 1000;
+  top: 7% !important;
+}
+
+.inverted2 {
+  transform: rotateY(15deg);
+}
+
+.left_block {
+  position: absolute;
+  width: 24%;
+  height: 100%;
+  background-color: rgb(213 182 225);
+  z-index: 99;
+  top: 0%;
+  opacity: 0.8;
+  border: 0.5px solid #a316ad;
+  left: 100%,
+}
+
+.aamai_weather,
+.aamai_cricket {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 2%;
+}
+
+.right_image {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  top: 12%;
+  left: 10%;
+}
+
+.maintain,
+.maintain1 {
+  left: 42% !important;
+}
+
+.tv_spbox {
+  z-index: 100;
+  position: absolute;
+  right: 20%;
+  top: 43% !important;
+}
+
+.inverted3 {
+  transform: rotateY(180deg);
+  z-index: 100;
+}
+
+.radio_spbox {
+  z-index: 100;
+  left: 54%;
+  top: 6% !important;
+}
+
+.text_phone {
+  left: 60% !important;
+}
+
+.text_radio,
+.text_tv {
+  left: 50% !important;
+  z-index: 999;
+}
+
+.news_spbox {
+  top: 43% !important;
+  left: 14%;
+  z-index: 999;
+}
+
+.spbox-1 {
+  position: absolute;
+  top: 55%;
+  left: 18%;
+  width: 30%;
+  transition: all 2s ease-in;
+}
+
+.sp-right {
+  position: absolute;
+  top: 53%;
+  right: 17%;
+  transition: all 2s ease-in;
+}
+
+.sp-right-1 {
+  position: absolute;
+  top: 35%;
+  right: 20%;
+  transition: all 2s ease-in;
+}
+
+.inverted {
+  transform: rotateY(180deg);
+}
+
+.inverted-2 {
+  transform: rotateY(180deg);
+}
+
+.momspch {
+  width: 89%;
+  top: 12%;
+  left: 17%;
+  font-size: 2.2rem;
+}
+
+.momspch:lang(np) {
+  width: 89%;
+  top: 8%;
+  left: 16.5%;
+  font-size: 2.45rem;
+}
+
+.radhaspch {
+  top: 25%;
+  right: 1%;
+  font-size: 2.2rem;
+}
+
+.radhaspch:lang(np) {
+  top: 27%;
+  right: 5%;
+  font-size: 2.45rem;
+}
+
+.r-1:lang(np) {
+  right: 3%;
+}
+
+.m-2:lang(np) {
+  width: 93.5%;
+  top: 27%;
+  left: 15.5%;
+  font-size: 2.4rem;
+}
+
+.r-2:lang(np) {
+  top: 28%;
+  right: 2.5%;
+  font-size: 2.4rem;
+}
+
+.hide {
+  display: none;
+  transition: all 2s ease-in;
+}
+
+.top-text,
+.top-text2 {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  background-color: #99b98f;
+  color: white;
+  text-align: center;
+  font-size: 1.6vw;
+  padding: 2%;
+  z-index: 1;
+}
+
+.top-text:lang(en) {
+  font-family: sniglet;
+}
+
+.ball_select {
+  position: absolute;
+  bottom: 6%;
+  left: 32%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.bag_select {
+  position: absolute;
+  bottom: 12%;
+  left: 1%;
+  width: 10%;
+  cursor: pointer;
+}
+
+.teddy_select {
+  position: absolute;
+  bottom: 3%;
+  right: 23%;
+  width: 10%;
+  cursor: pointer;
+  transform: rotateZ(-30deg);
+}
+
+.robot_select {
+  position: absolute;
+  bottom: 1%;
+  left: 13%;
+  width: 10%;
+  transform: rotateZ(30deg);
+  cursor: pointer;
+}
+
+.truck_select {
+  position: absolute;
+  bottom: 7%;
+  right: 5%;
+  width: 10%;
+  cursor: pointer;
+  transform: rotateZ(20deg);
+}
+
+.ball {
+  position: absolute;
+  bottom: 30%;
+  right: 27%;
+  width: 4%;
+}
+
+.bag {
+  position: absolute;
+  bottom: 43%;
+  right: 17%;
+  width: 8%;
+}
+
+.teddy {
+  position: absolute;
+  bottom: 42%;
+  right: 24%;
+  width: 10%;
+}
+
+.robot {
+  position: absolute;
+  bottom: 36%;
+  right: 21.5%;
+  width: 7%;
+}
+
+.truck {
+  position: absolute;
+  bottom: 26%;
+  right: 17%;
+  width: 9%;
+}
+
+.card {
+  position: absolute;
+  width: 28%;
+  height: 45%;
+  top: 23%;
+  border: 0.2vmin solid black;
+  background-color: #eeeeee;
+  border-radius: 1.5vmin;
+  transform-style: preserve-3d;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5vmin;
+  object-fit: contain;
+}
+
+.card-1 {
+  left: 11%;
+}
+
+.card-2 {
+  right: 11%;
+}
+
+.label-card {
+  display: none;
+  position: absolute;
+  top: 75%;
+  width: 30%;
+  /* background-color: #7b9f6b; */
+  background-color: #67baca;
+  color: black;
+  font-size: 3vw;
+  padding: 0.5% 0%;
+  border-radius: 1.5vmin;
+  font-family: sniglet;
+}
+
+@media (min-aspect-ratio: 4/3) {
+  .label-card {
+    font-size: 4vh;
+  }
+}
+
+.label-1 {
+  left: 10%;
+}
+
+.label-2 {
+  right: 10%;
+}
+
+.card>img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+}
+
+.label-card-hover:hover {
+  cursor: pointer;
+  -webkit-filter: contrast(125%) brightness(125%);
+  filter: contrast(125%) brightness(125%);
+
+}
+
+.flip-anim {
+  display: none;
+  -webkit-animation: flip-anim 0.5s ease-in-out;
+  animation: flip-anim 0.5s ease-in-out;
+}
+
+@-webkit-keyframes flip-anim {
+  0% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flip-anim {
+  0% {
+    transform: rotateX(-90deg);
+  }
+}
+
+.narrator-left {
+  position: absolute;
+  left: 0%;
+  top: 30%;
+  width: 40%;
+}
+
+.narrator-right {
+  position: absolute;
+  right: 0%;
+  top: 30%;
+  width: 40%;
+}
+
+.left-bubble {
+  position: absolute;
+  top: 15%;
+  left: 27%;
+  /* left: 30%; */
+  width: 48%;
+  height: 31%;
+}
+
+.right-bubble {
+  position: absolute;
+  top: 31% !important;
+  left: 4%;
+  width: 30%;
+  height: 20%;
+}
+
+.texts {
+  top: 3%;
+  left: 15%;
+  width: 80%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.texts-s11 {
+  top: 11%;
+  left: 21%;
+  width: 80%;
+  font-size: 2.65rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.texts-2-s12 {
+  top: 11%;
+  left: 7%;
+  width: 81%;
+  font-size: 2.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.texts-2-s12:lang(np) {
+  top: 23%;
+  /* left: 5%; */
+  width: 85%;
+  font-size: 2.8rem;
+}
+
+.texts-2-s13 {
+  top: 13%;
+  left: 21%;
+  width: 78%;
+  font-size: 2.65rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.texts-2-s13:lang(np) {
+  left: 21%;
+}
+
+.texts-2-s14 {
+  top: 11%;
+  left: 9%;
+  width: 75%;
+  font-size: 2.7rem;
+  font-weight: 500;
+}
+
+.texts-2-s14:lang(np) {
+  top: 13%;
+  /* left: 10%; */
+}
+
+.texts-s8 {
+  top: 11%;
+  left: 21.5%;
+  width: 80%;
+  font-size: 2.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.texts-2 {
+  top: 5%;
+  left: 7%;
+  width: 82%;
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+.texts-2:lang(np) {
+  top: 10%;
+  /* left: 6%; */
+  font-size: 2.6rem;
+}
+
+.texts-s10 {
+  top: 5%;
+  left: 18%;
+  width: 88%;
+  font-size: 2.25rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.texts-s10:lang(np) {
+  top: 10%;
+  left: 17%;
+  font-size: 2.6rem;
+}
+
+.corrects {
+  background-color: green;
+}
+
+.wrongs {
+  background-color: red;
+}
+
+.speechbg {
+  /* width: 105%; */
+  width: 110%;
+  height: 100%;
+}
+
+.speechbox>p {
+  position: absolute;
+  top: 50% !important;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.momspch,
+.texts-s8,
+.texts-s10,
+.texts-s11,
+.texts-2-s13 {
+  left: 62% !important;
+}
+
+@media screen and (min-aspect-ratio: 4/3) {
+  .speechbox p {
+    /* top: 15%; */
+    font-size: 2.8vh;
+  }
+
+  .speechbox .momspch {
+    top: 10%;
+    font-size: 3vh;
+  }
+
+  .speechbox .radhaspch {
+    top: 33%;
+    font-size: 3vh;
+  }
+
+  .speechbox .m-2 {
+    top: 16%;
+  }
+
+  .speechbox .texts-s10 {
+    top: 7%;
+    font-size: 3vh;
+  }
+
+  .speechbox .texts-s11 {
+    top: 17%;
+  }
+
+  .speechbox .texts-2 {
+    top: 7%;
+    font-size: 3vh;
+  }
+
+  .speechbox {
+    top: 17%;
+    font-size: 4vh;
+  }
+
+  .speechbox .texts-2-s13 {
+    top: 20%;
+    font-size: 4vh;
+  }
+
+  .speechbox .texts-2-s14 {
+    top: 19%;
+  }
+
+  .speechbox .m-2:lang(np) {
+    top: 35%;
+  }
+}
+
+@media screen and (max-aspect-ratio: 4/3) {
+  .speechbox p {
+    top: 20%;
+    font-size: 2.5vw;
+  }
+
+  .speechbox .momspch {
+    top: 10%;
+    font-size: 2vw;
+  }
+
+  .speechbox .radhaspch {
+    top: 30%;
+    font-size: 2vw;
+  }
+
+  .speechbox .m-2 {
+    top: 20%;
+    font-size: 2vw;
+  }
+
+  .speechbox .texts-s11 {
+    top: 20%;
+  }
+
+  .speechbox .texts-2-s12 {
+    top: 20%;
+    font-size: 3vw;
+  }
+
+  .speechbox .texts-2 {
+    top: 8%;
+    font-size: 2.5vw;
+  }
+
+  .speechbox .texts-s10 {
+    top: 8%;
+    font-size: 2.5vw;
+  }
+
+  .speechbox .texts-2-s13 {
+    top: 20%;
+    font-size: 3vw;
+  }
+
+  .speechbox .texts-2-s14 {
+    top: 20%;
+  }
+
+  .speechbox .m-2:lang(np) {
+    top: 35%;
+    font-size: 2vw;
+  }
+}

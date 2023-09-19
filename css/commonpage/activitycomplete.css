@@ -1,0 +1,98 @@
+/******
+*** activity complete stylesheet ***
+*******/
+div.activityCompletePage{
+    font-size: 1.3em !important;
+    position:absolute !important;
+    top:0% !important;
+    left:0% !important;
+    height:100% !important;
+    width:100% !important;
+    background-color:#3DDAA5 !important;
+}
+
+div.activityCompletePage > div{
+    position:absolute !important;
+    top:10%;
+    left:0%;
+    height:90%;
+    width:100%;
+    background-color:#FFBA90;
+}
+
+div.activityCompletePage > div > div{
+    position:absolute !important;
+    top:5%;
+    left:5%;
+    height:95%;
+    width:90%;
+    background-color:#FFFEDF;
+}
+
+div.activityCompletePage > div > div > h3.activityCompleteHeading{
+    position:relative !important;
+    margin-top:3% !important;
+    width:100%;
+    padding-bottom:1%;
+    text-align:center;
+    color:#FB8D02;
+    border-bottom:1px solid #FFF0AC;
+    font-size:1.6em;
+}
+
+div.activityCompletePage > div > div > p.activityCompleteNotice1{   
+    position:relative !important;             
+    margin-top:4% !important;
+    color:#59595A;
+    width:100%;
+    text-align:center;
+    background: transparent !important;
+}
+
+div.activityCompletePage > div > div > a.activityCompleteCheckMenu{   
+    position:relative !important;
+    display:table;
+    margin:3% auto !important;              
+    color:#01A1FF;
+    text-align:center;
+    border-top:1px dashed #01A1FF;
+    border-bottom:1px dashed #01A1FF;
+    background-color:#FFF5B7;
+    font-weight:normal;
+}
+
+div.activityCompletePage > div > div > a.activityCompleteCheckMenu:hover{
+    color:#FB8D02;
+    border-top:1px solid #FB8D02;
+    border-bottom:1px solid #FB8D02;
+}
+
+div.activityCompletePage > div > div > p.activityCompleteRestartNotice{   
+    position:relative !important;             
+    margin-top:5% !important;
+    color:#59595A;
+    width:100%;
+    text-align:center;
+}
+
+div.activityCompletePage > div > div > a:nth-of-type(n+2){   
+    position:absolute !important;
+    top:65% !important;       
+    color:#04B238;
+    cursor:pointer;
+    border-bottom:1px dashed #04B238;
+}
+
+div.activityCompletePage > div > div > a:nth-of-type(2){   
+    right: 60% !important;
+}
+
+div.activityCompletePage > div > div > a:nth-of-type(3){   
+   left: 55% !important;
+}
+
+div.activityCompletePage > div > div > a:hover{
+    text-decoration:none !important;  
+    border-bottom:1px solid #04B238;
+}
+

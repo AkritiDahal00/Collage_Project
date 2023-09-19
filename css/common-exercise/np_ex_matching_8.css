@@ -1,0 +1,371 @@
+.activity_container {
+    width      : 100%;
+    height     : 100%;
+    position   : relative;
+    overflow   : hidden;
+    font-size  : 1.3em;
+    background : #fff;
+    box-shadow : inset 0 0 30px #f2f2f2;
+}
+
+.activity_container, .activity_container * {
+    position : relative;
+    margin   : 0;
+    padding  : 0;
+}
+
+.activity_container .nextBtn{
+    display  : none;
+    position : absolute;
+    bottom   : 0%;
+    right    : 0%;
+    width    : 7%;
+    height   : 10%;
+    z-index  : 10;
+}
+
+.activity_container .prevBtn{
+    display  : none;
+    position : absolute;
+    bottom   : 0%;
+    left     : 0%;
+    width    : 7%;
+    height   : 10%;
+    z-index  : 10;
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+p{
+	margin: 0;
+}
+
+.board {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+    font-family: amaranth;
+}
+
+.vertical-horizontal-center {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.vertical-center {
+	position: relative;
+	top: 45%;
+	transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	text-align: center;
+}
+
+.coverboardfull {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+div.generaltemplateblock {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	/*border   : 1px solid red; */
+}
+
+div.headerblock {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 20%;
+	background-color: #E3D0DA;
+	color: #CE00A7;
+	
+	/*border   : 1px solid red;*/
+}
+
+div.generaltemplateblock[data-templatecontains='hasheaderblock'] div.contentblock {
+	top: 20%;
+	height: 80%;
+	position: absolute;
+	width: 100%;
+}
+
+div.generaltemplateblock[data-templatecontains='hasonlycontent'] div.contentblock {
+	top: 0%;
+	height: 100%;
+}
+
+div.textblock {
+	position: relative;
+}
+
+div.imageblock {
+	position: absolute;
+	top: 39%;
+	right: 5%;
+	height: 55%;
+	width: 40%;	
+}
+.myNextStyle {
+	background-image: url("../../images/arrows/arrow.png");
+}
+
+.myNextStyle:hover {
+	background-image: url("../../images/arrows/arrow_hover.png");
+}
+
+.myNextStyle:active {
+	background-image: url("../../images/arrows/arrow_active.png");
+}
+
+.myPrevStyle {
+	background-image: url("../../images/arrows/arrow_prev.png");
+}
+
+.myPrevStyle:hover {
+	background-image: url("../../images/arrows/arrow_hover_prev.png");
+}
+
+.myPrevStyle:active {
+	background-image: url("../../images/arrows/arrow_active_prev.png");
+}
+/*============ exercise template ===================
+==================================================== */
+
+.insturction{
+	position: absolute;
+	top: 60%;
+	transform: translateY(-50%);
+	left: 52%;
+	width: 35%;
+	background: #F8B3C3;
+	font-size: 1.8vw;
+	text-align: left;
+	padding: 3% 7% 3% 2%;
+	border-radius: 3vmin;
+	z-index: 10;
+}
+.insturction:after{
+	content: '';
+	position: absolute;
+	right: 5%;
+	bottom: 5%;
+	height: 60%;
+	width: 25%;
+	background: url("../../images/worm_shaking_head.gif");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.nep_draggableblock{
+	position: absolute;
+	top: 0%;
+	height: 30%;
+	width: 100%;
+	left: 0%;
+	padding: 1%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.nep_droppableblock{
+	top: 32%;
+	height: 65%;
+	position: absolute;
+	width: 100%;
+	left: 0%;
+	padding: 1% 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+}
+
+.nep_draggabletext{
+	cursor: grab;
+	padding: 0.1vw 2vw;
+	margin: 0.2vw;
+	background-color: #43B5DC;
+	border-top-right-radius: 1vmin;
+	border-bottom-right-radius: 1vmin;
+	font-size: 1.8vw;
+	color: white;
+	/*border: 1px solid black;*/
+}
+.grabbing{
+	cursor: grabbing;
+	/*background-color: #FCD172;*/
+}
+
+.nep_droppablediv{
+	width: 50%;
+	left: 0%;
+	height: 100%;
+	margin: 0 0.4vw;
+}
+.nep_droppablediv>*{
+	font-size: 1.8vw;
+}
+
+.p1_class{
+	display: table-cell;
+    vertical-align: middle;
+	position: relative;	
+	width: 35%;
+	padding: 0.5% 0%;
+	float: left;
+	text-align: center;
+	border-top-left-radius: 1vmin;
+	border-bottom-left-radius: 1vmin;
+	color: white;
+	background-color: #20948B;
+}
+
+.p2_class{
+	display: inline-block;
+	position: relative;	
+	width: 65%;
+	padding: 0.5% 2%;
+	float: left;
+	text-align: center;
+	border-top-right-radius: 1vmin;
+	border-bottom-right-radius: 1vmin;
+	color: white;
+	background-color: #CFE2F3;
+	white-space: pre;
+}
+.hoverd_match>p:last-child{
+	cursor: drop;
+	background-color: #FFD966;
+}
+.invisiblehover{
+	position: absolute;
+	z-index: 1000000;
+	white-space: pre;
+}
+
+.fairy_congratulations{
+	position: absolute;
+	right: 4%;
+	top: 30%;
+	width: 35%;
+	height: 25%;
+	text-align: left;
+	font-size: 2.4vw;
+	z-index: 500;
+}
+
+.fairy_congratulations:after{
+	content: '';
+	position: absolute;
+	left: -35%;
+	top: -25%;
+	height: 100%;
+	width: 30%;
+	background: url("../../images/fairy/fairy_fly.gif");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.fairy_exenextbtn{
+	cursor: pointer;
+	position: absolute;
+	right: 4%;
+	top: 55%;
+	padding: 2%;
+	text-align: left;
+	font-size: 2.4vw;
+	background-color: #FF6B64;
+	border-radius: 2vmin;
+	border: 0.5vmin solid #FDD608;
+	z-index: 500;
+	color: white;
+}
+
+.stars_1{
+	position: absolute;
+	top: 30%;
+	left: 25%;
+	width: 12%;
+}
+
+.stars_2{
+	position: absolute;
+	top: 60%;
+	left: 10%;
+	width: 12%;
+	transform: rotate(-12deg);
+}
+
+.stars_3{
+	position: absolute;
+	top: 45%;
+	left: 30%;
+	width: 12%;
+	transform: rotate(-25deg);
+}
+
+.stars_4{
+	position: absolute;
+	top: 75%;
+	left: 30%;
+	width: 12%;
+	transform: rotate(25deg);
+}
+.fairy_fade_in{
+	animation: appear 2s linear both;
+	-webkit-animation: appear 2s linear both;
+}
+@-webkit-keyframes
+appear {
+0%   {opacity: 0;}
+100% {opacity: 1;}
+}
+@keyframes
+appear {
+0%   {opacity: 0;}
+100% {opacity: 1;}
+}
+
+@media (min-aspect-ratio: 4/3){
+	.insturction{
+		font-size: 3vmin;
+	}
+	.nep_draggabletext{
+		padding: 0.2vh 3vh;
+		margin: 0.3vh;
+		font-size: 2.8vmin;
+	}
+	.nep_droppablediv{
+		margin: 0 0.6vh;
+	}
+	.nep_droppablediv>*{
+		font-size: 2.8vmin;
+	}
+	.fairy_congratulations, .fairy_exenextbtn{
+		font-size: 3.5vmin;
+	}
+	
+}
+

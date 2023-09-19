@@ -1,0 +1,239 @@
+{
+    "gradess": {
+      "en": "Class",
+      "np": "कक्षा"
+    },
+  
+    "allgrades": {
+      "en": ["1", "2", "3", "4", "5", "6", "7", "8"],
+      "np": ["१", "२", "३", "४", "५", "६", "७", "८"]
+    },
+  
+    "gradeselect": {
+      "en": "Choose your grade",
+      "np": "कक्षा छान"
+    },
+  
+    "menu": {
+      "en": "Menu",
+      "np": "सूची"
+    },
+  
+    "lesson": {
+      "en": "Lesson",
+      "np": "पाठ"
+    },
+  
+    "nextPage": {
+      "en": "Next Page",
+      "np": "अर्को पृष्ठ"
+    },
+  
+    "prevPage": {
+      "en": "Prev Page",
+      "np": "अघिल्लो पृष्ठ"
+    },
+  
+    "footerText": {
+      "en": "eLearning",
+      "np": "eLearning"
+    },
+    "termCondition": {
+      "en": "Terms of Use",
+      "np": "प्रयोगका सर्तहरू"
+    },
+    "SupportText": {
+      "en": "Supported by:",
+      "np": "सहयोग:"
+    },
+  
+    "exercise": {
+      "en": "Exercise",
+      "np": "अभ्यास"
+    },
+  
+    "all": {
+      "en": "All",
+      "np": "पूरै"
+    },
+  
+    "indexText": {
+      "en": "eLearnimg",
+  
+      "np": "eLearnimg-पाठ"
+    },
+  
+    "indexTexta": {
+      "en": " Interactive Digital Learning Materials ",
+  
+      "np": " अन्तरक्रियात्‍मक डिजिटल शैक्षिक सामग्री "
+    },
+    "badgeText": {
+      "en": "Free",
+      "np": "नि:शुल्क"
+    },
+    "chooseGrade": {
+      "en": "CHOOSE Your GRADE",
+  
+      "np": "कक्षा छान"
+    },
+    "chooseSubject": {
+      "en": "CHOOSE Your SUBJECT",
+  
+      "np": "विषय छान"
+    },
+    "indexTextb": {
+      "en": "",
+  
+      "np": ""
+    },
+  
+    "indexTextSecond": {
+      "en": "",
+  
+      "np": ">"
+    },
+  
+    "indexTextBelow": {
+      "en": "Note: These digital educational content ",
+  
+      "np": "नोटः यी डिजिटल शैक्षिक सामग्रीहरू "
+    },
+  
+    "footerApprovalText": {
+      "en": "Approved by: ",
+  
+      "np": "पाठ्‍यक्रम विकास "
+    },
+  
+    "indexTextAlert": {
+      "en": "Choose grade first",
+      "np": "पहिले कक्षा छान"
+    },
+  
+    "help": {
+      "en": "Help",
+      "np": "सहयोग"
+    },
+  
+    "helptext": {
+      "en": [
+        "Title",
+        "Purpose of activity",
+        "About lesson",
+        "Methods to use activity",
+        "Lesson",
+        "Exercise",
+        "Self-assessment"
+      ],
+      "np": [
+        "शिर्षक",
+        "क्रियाकलापको उद्देश्य",
+        "पाठबारे",
+        "क्रियाकलाप चलाउने तरिका",
+        "पाठ",
+        "अभ्यास",
+        "स्वमूल्याङ्कन"
+      ]
+    },
+  
+    "textObjective": {
+      "en": "Learning Outcome",
+      "np": "सिकाइ उपलब्धि "
+    },
+  
+    "activityGuide": {
+      "en": "Activity Guide",
+      "np": "क्रियाकलाप निर्देशिका"
+    },
+  
+    "startText": {
+      "en": "Let's start",
+      "np": "सुरु गरौँ"
+    },
+  
+    "subject": {
+      "np": "विषय",
+      "en": "Subject"
+    },
+  
+    "studyMaterial": {
+      "np": ["सिकाइ-क्षेत्र", "सिकाइ-उपलब्धि", "सिकाइ-उपलब्धिको विस्तृतीकरण"],
+      "en": ["Learning area(s)", "Learning Outcome", "Elaboration"]
+    },
+  
+    "actObj": {
+      "np": ["क्रियाकलापको उद्देश्य", "क्रियाकलाप चलाउने तरिका", "स्वमूल्याङ्कन"],
+      "en": [
+        "Objective of the activity",
+        "How to use the activity",
+        "Self-assessment"
+      ]
+    },
+  
+    "actbefore": {
+      "np": [
+       
+      ],
+      "en": [
+       
+      ]
+    },
+  
+    "playtime": {
+      "en": "Play",
+      "np": "खेलौँ"
+    },
+  
+    "learn": {
+      "en": "Learn",
+      "np": "सिकौँ"
+    },
+  
+    "about_the_lesson_heading": {
+      "en": "About the lesson",
+      "np": "पाठको बारेमा"
+    },
+  
+    "curricular_requirement_heading": {
+      "en": "Curricular Requirement",
+      "np": "पाठ्यक्रमको आवश्यकता"
+    },
+    "prerequisites_heading": {
+      "en": "Prerequisites",
+      "np": "पूर्व आवश्‍यकता"
+    },
+    "lesson_guidelines_heading": {
+      "en": "Lesson guidelines",
+      "np": "पाठ निर्देशिका"
+    },
+    "related_activities_heading": {
+      "en": "Related activities",
+      "np": "सम्बन्धित क्रियाकलाप"
+    },
+    "assesment_strategies_heading": {
+      "en": "Assessment Strategies",
+      "np": "मूल्याङ्कन रणनीति"
+    },
+    "evaluation_heading": {
+      "en": "Evaluation",
+      "np": "मूल्‍याङ्‍कन"
+    },
+    "term_cond_text": {
+      "en": " ",
+      "np": ""
+    },
+    "term_cond_text_sectext": {
+      "en": " ",
+      "np": ""
+    },
+    "term_cond_text_head": {
+      "en": "Terms of use",
+      "np": "प्रयोगका सर्तहरू"
+    },
+    "term_cond_text_rule1": {
+      "en": "",
+      "np": ""
+  }
+}
+  

@@ -1,0 +1,26 @@
+{
+	"science" : {
+		"desc" : "science science",
+		"types" : ["physic","chemistry","Biology"],
+		"configFile" : "configscience.json",
+		"id" : "sci"
+	},
+	"math" : {
+		"desc" : "maths maths",
+		"types" : ["Arithmetics","Algebra","Geometry"],
+		"configFile" : "configmath.json",
+		"id" : "mat"
+	},
+	"english": {
+		"desc" : "smth about english",
+		"types" : ["Reading","Writing","Grammer"],
+		"configFile" : "configenglish.json",
+		"id" : "eng"
+	},
+	"nepali": {
+		"desc" : "smth about nepali",
+		"types" : ["Reading","Writing","Grammer"],
+		"configFile" : "confignepali.json",
+		"id" : "nep"
+	}
+}

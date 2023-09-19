@@ -1,0 +1,263 @@
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172822248-2"></script> -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-172822248-2');
+    </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <title>eLearning</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- added to load data directly from server NEED TO REMOVE DURING DEPLOYMENT -->
+    <meta http-equiv="“Pragma”" content="”no-cache”" />
+    <meta http-equiv="“Expires”" content="”-1″" />
+    <meta http-equiv="“CACHE-CONTROL”" content="”NO-CACHE”" />
+    <!-- added to load data directly from server ends -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/homework.png"
+    />
+    <!--  <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/templetestyle.css" />
+    <style type="text/css">
+      @font-face {
+        font-family: ubuntu;
+        /*src: url(fonts/Lohit-Nepali.ttf);*/
+        src: url(fonts/mangal.ttf);
+        /*src: url(fonts/kalimati.ttf);*/
+        /*src: url(fonts/kokila_0.ttf);*/
+        /* src: url(fonts/madan.ttf); */
+      }
+
+      body:lang(np),
+      body:lang(np) * {
+        font-family: ubuntu !important;
+      }
+      body:lang(en),
+      body:lang(en) * {
+        font-family: poppins;
+      }
+      body:lang(np) .glyphicon {
+        font-family: "Glyphicons Halflings" !important;
+      }
+      body:lang(en) .glyphicon {
+        font-family: "Glyphicons Halflings" !important;
+      }
+      .terms_of_use_info {
+          height: 111%;
+      }
+     .langswitchcontainer > span>a:lang(np) {
+         font-family: 'poppins' !important;
+        }
+    </style>
+  </head>
+  <body>
+     <!-- terms of use pop starts -->
+      <div class="terms_of_use_info">
+        <div>
+            <p></p>
+        </div>
+    </div>
+    <!-- terms of use pop ends -->
+    <header style="background: #FFF;">
+      <div class="navbar colorPurple" role="navigation">
+        <div class="container">
+          <div
+            id="topbar"
+            class="col-lg-4 col-md-3 col-sm-3 col-xs-4 inner-addon left-addon"
+          >
+            <i class="glyphicon glyphicon-search"></i>
+            <input
+              class="form-control"
+              id="search"
+              type="text"
+              class="search-query"
+              placeholder="Search Activities"
+              autocomplete="off"
+            />
+            <ul class="list-group" id="result"></ul>
+          </div>
+          <div
+            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nav navbar-nav subject"
+          >
+            <div
+              class="logocontainer"
+            >
+              <a href="index.html"
+                ><img
+                  src="images/homework.png"
+                  class="img-responsive col-centered"
+                  draggable="false"
+              /></a>
+            </div>
+            <div class="langswitchcontainer" >
+              <span class="nav-pills">
+                <a href="?lang=np" style="font-family: 'poppins' !important;" data-lang="np"><span style="font-family: 'poppins' !important;">ने</span></a>
+              </span>
+              <span class="label"> | </span>
+              <span class="nav-pills">
+                <a href="?lang=en" style="font-family: 'poppins' !important;" data-lang="en">En</a>
+              </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="dropdown dropdowncontainer subjectpagedropdowncontainer">
+        <script type="text/x-handlebars-template" id="classdropdown-template">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            <span class="buttongradedata">{{gradetextdata}}</span>
+            <span class="glyphicon glyphicon-chevron-down dropdownglyphicon" aria-hidden="true"></span>
+          </button>
+          <ul class="dropdown-menu">
+            {{#each allgrades}}
+                <li><a data-grade="{{specificgrade}}" href="{{gradelink}}">{{specificgradetext}}</a></li>
+            {{/each}}
+          </ul>
+        </script>
+      </div>
+
+      <ul class="nav nav-pills subListSide">
+        <script type="text/x-handlebars-template" id="subListSide">
+          {{#each this}}
+             {{#if showTab}}
+              <li class="{{clas}}" >
+              {{gradelink}}<a data-highlight="" href="{{link}}">{{title}}</a>
+              </li>
+              {{/if}}
+          {{/each}}
+        </script>
+      </ul>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h4 class="typesd"></h4>
+        </div>
+      </div>
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mid col-centered">
+        <div class="row">
+          <!-- the commented block below contains exercise list it can be used sometimes in need -->
+          <!--<div class=" col-lg-2 col-sm-3 col-md-3 col-sm-3 col-xs-4 sidebar">
+                <ul class="subListSide">
+
+                    <script type="text/x-handlebars-template" id="subListSide">
+                    {{#each this}}
+                        <li class="{{clas}}">
+                            <a href={{link}}>{{title}}</a>
+                        </li>
+                    {{/each}}
+
+                    </script>
+
+                </ul>
+                <script type="text/x-handlebars-template" id="titleList">
+                <ul>
+                    {{#each this}}
+                        <li class="{{clas}}" >
+                        <a href="{{link}}" >{{subject}}</a>
+                        </li>
+                    {{/each}}
+                </ul>
+                </script>
+
+
+                <ul class="subExeList">
+
+                    <script type="text/x-handlebars-template" id="exerciseList">
+
+                    {{#each this}}
+                        <li class="{{clas}}" >
+                        <a href="{{link}}" >{{exercise}}</a>
+                        
+                        </li>
+                    {{/each}}
+
+                    </script>
+
+                </ul>
+            </div> -->
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 subjectcontainer">
+            <div class="subjects"></div>
+          </div>
+
+          
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="aboveFooter col-lg-12 col-md-12"></div>
+    <footer class="footerAct">
+      <div class="row footerCC col-sm-12 col-lg-12 col-md-12">
+        <div class="container">
+          <div class="pull-right">
+            <span class="copyright">&copy;</span>
+            <p class="design"></p>
+            <a class="term_use" ><button class="btn btn-light term_of_use"></button></a>
+            <!-- *Designed &amp; developed by OLE Nepal* -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/x-handlebars-template" id="listOfTitles">
+      {{#each this}}
+          <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 subjectBox intro-subject-box thumbnail {{subTitle}} {{type}}">
+              <a href={{link}}>
+                  <img src={{images}} width="100%" class="linkImgGrid" draggable="false"/>
+                  <span class="badge" >{{{chapternumber}}}</span>
+                  <span class="activityname">{{{subject}}}</span>
+              </a>
+          </div>
+      {{/each}}
+    </script>
+
+    <script type="text/x-handlebars-template" id="listOfLevels">
+      {{#each this}}
+          <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 subjectBox intro-subject-box levelBox {{subTitle}}">
+          <a href="{{link}}">
+              <div class="levelbox_link_content_wrapper">
+                  <img src="{{images}}" width="100%" draggable="false">
+                  <div class="levelDefn">
+                      <div class="title">{{title}}</div>
+                      <span class="defination">{{defination}}</span>
+                  </div>
+              </div>
+          </a>
+          </div>
+      {{/each}}
+    </script>
+
+    <!--####################################################################################
+    Suggested(although a suggestion mind it!) sequence of scripts to put :
+    1.) jquery-1.11.3.min.js -> you know it obvious its what everything in our project uses.
+    2.) bootstrap.min.js -> all the bootstrap functions should be loaded first
+    if any.
+    3.) handlebars-3.0.3.js -> handlebars templates are decoded at runtime to
+    make dom available.
+    4.) ole.subjects.js -> all the working of subjects page.
+ #####################################################################################-->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/handlebars-3.0.3.js"></script>
+    <script type="text/javascript" src="js/ole.subjects.js" defer></script>
+    <script type="text/javascript" src="js/ole.search.js" defer></script>
+    <script type="text/javascript" src="js/ole.lib.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,383 @@
+/*-------------------------
+ ------- for fonts --------
+ --------------------------*/
+.my_font_super_big{
+	font-size: 6vw;
+}
+.my_font_ultra_big{
+	font-size: 4.8vw;
+}
+.my_font_very_big{
+	font-size: 4vw;
+}
+.my_font_big{
+	font-size: 2.9vw;
+}
+.my_font_medium{
+	font-size: 2vw;
+}
+.my_font_small{
+	font-size: 1.5vw;
+}
+
+@media (min-aspect-ratio: 4/3){
+	.my_font_super_big{
+		font-size: 7.5vmin;
+	}
+	.my_font_ultra_big{
+		font-size: 6vmin;
+	}
+	.my_font_very_big{
+		font-size: 5vmin;
+	}
+	.my_font_big{
+		font-size: 4vmin;
+	}
+	.my_font_medium{
+		font-size: 3vmin;
+	}
+	.my_font_small{
+		font-size: 2vmin;
+	}
+}
+
+
+/*my font styles*/
+
+@font-face {
+    font-family: Sniglet;
+    src: url('../fonts/sniglet.ttf');
+}
+@font-face {
+    font-family: kalimati;
+    src: url('../fonts/kalimati.ttf');
+}
+@font-face {
+    font-family: mitr_light;
+    src: url('../fonts/mitr_light.ttf');
+}
+
+@font-face {
+    font-family: ShortStack;
+    src: url('../fonts/shortstack.ttf');
+}
+@font-face {
+    font-family: Pangolin;
+    src: url('../fonts/Pangolin-Regular.ttf');
+}
+@font-face {
+    font-family: questrial;
+    src: url('../fonts/questrial.ttf');
+}
+@font-face {
+    font-family: montserrat;
+    src: url('../fonts/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: HappyMonkey;
+    src: url('../fonts/happy_monkey/HappyMonkey-Regular.ttf');
+}
+@font-face {
+    font-family: ProximaNova;
+    src: url('../fonts/proxima_nova/proxima.ttf');
+}
+@font-face {
+    font-family: poppins;
+    src: url('../fonts/poppins.ttf');
+}
+@font-face {
+	font-family: patrickhand;
+	src: url('../fonts/PatrickHand-Regular.ttf');
+}
+@font-face {
+	font-family: digital7;
+	src: url('../fonts/digital-7.ttf');
+}
+@font-face {
+	font-family: luckiestguy;
+	src: url('../fonts/LuckiestGuy.ttf');
+}
+@font-face {
+	font-family: chelseamarket;
+	src: url('../fonts/ChelseaMarket-Regular.ttf');
+}
+@font-face {
+	font-family: comingsoon;
+	src: url('../fonts/ComingSoon.ttf');
+}
+@font-face {
+	font-family: schoolbell;
+	src: url('../fonts/Schoolbell.ttf');
+}
+@font-face {
+	font-family: cherryswash;
+	src: url('../fonts/cherryswash.ttf');
+}
+@font-face {
+	font-family: pacifico;
+	src: url('../fonts/pacifico.ttf');
+}
+@font-face {
+	font-family: dosis;
+	src: url('../fonts/dosis/Dosis-Regular.ttf');
+}
+@font-face {
+	font-family: concertone;
+	src: url('../fonts/ConcertOne-Regular.ttf');
+}
+@font-face {
+	font-family: amaticsc;
+	src: url('../fonts/AmaticSC-Regular.ttf');
+}
+@font-face {
+	font-family: bubblegumsans;
+	src: url('../fonts/BubblegumSans-Regular.ttf');
+}
+@font-face {
+	font-family: pompiere;
+	src: url('../fonts/Pompiere-Regular.ttf');
+}
+@font-face {
+	font-family: andika;
+	src: url('../fonts/Andika-Regular.ttf');
+}
+@font-face {
+	font-family: amaranath;
+	src: url('../fonts/amaranath/amaranth-regular.ttf');
+}
+@font-face {
+	font-family: bangers;
+	src: url('../fonts/Bangers-Regular.ttf');
+}
+@font-face {
+	font-family: boogaloo;
+	src: url('../fonts/Boogaloo-Regular.ttf');
+}
+@font-face {
+	font-family: bubblerone;
+	src: url('../fonts/BubblerOne-Regular.ttf');
+}
+@font-face {
+	font-family: comicsans;
+	src: url('../fonts/ComicSansMSRegular.ttf');
+}
+@font-face {
+	font-family: roboto_bold;
+	src: url('../fonts/RobotoSlab-Bold.ttf');
+}
+@font-face {
+	font-family: roboto;
+	src: url('../fonts/RobotoSlab-Regular.ttf');
+}
+@font-face {
+	font-family: calibri;
+	src: url('../fonts/calibri.ttf');
+}
+@font-face {
+	font-family: lobster;
+	src: url('../fonts/lobster.ttf');
+}
+@font-face {
+	font-family: acme;
+	src: url('../fonts/Acme-Regular.ttf');
+}
+@font-face {
+	font-family: bowlbyone;
+	src: url('../fonts/BowlbyOneSC-Regular.ttf');
+}
+@font-face {
+	font-family: cambria;
+	src: url('../fonts/cambria.ttf');
+}
+@font-face {
+	font-family: laila;
+	src: url('../fonts/laila/laila-regular.ttf');
+}
+@font-face {
+	font-family: laila_bold;
+	src: url('../fonts/laila/laila-semibold.ttf');
+}
+@font-face {
+	font-family: woolwich;
+	src: url('../fonts/woolwich.otf');
+}
+@font-face {
+	font-family: comfortaa;
+	src: url('../fonts/Comfortaa-Regular.ttf');
+}
+@font-face {
+	font-family: comfortaa_regular;
+	src: url('../fonts/Comfortaa-Regular.ttf');
+}
+@font-face {
+	font-family: inconsolata_bold;
+	src: url('../fonts/inconsolata-bold.ttf');
+}
+@font-face {
+	font-family: georgia;
+	src: url('../fonts/Georgia.ttf');
+}
+@font-face {
+	font-family: bitter;
+	src: url('../fonts/Bitter-Regular.ttf');
+}
+@font-face {
+	font-family: abeezee;
+	src: url('../fonts/ABeeZee/ABeeZee-Regular.ttf');
+}
+@font-face {
+	font-family: cuprum;
+	src: url('../fonts/Cuprum-Regular.ttf');
+}
+@font-face {
+	font-family: merriweather;
+	src: url('../fonts/Merriweather-Regular.ttf');
+}
+@font-face {
+	font-family: newsCycle;
+	src: url('../fonts/NewsCycle-Regular.ttf');
+}
+@font-face {
+	font-family: asap;
+	src: url('../fonts/asap/Asap-Regular.ttf');
+}
+@font-face {
+	font-family: breeserif;
+	src: url('../fonts/BreeSerif-Regular.ttf');
+}
+@font-face {
+	font-family: dekko;
+	src: url('../fonts/Dekko/Dekko-Regular.ttf');
+}
+@font-face {
+	font-family: mitr;
+	src: url('../fonts/mitr.ttf');
+}
+@font-face {
+	font-family: josefinSans;
+	src: url('../fonts/Josefin_Sans/JosefinSans-Regular.ttf');
+}
+@font-face {
+	font-family: quicksand;
+	src: url('../fonts/Quicksand/Quicksand-Regular.ttf');
+}
+@font-face {
+	font-family: loveyalikeasister;
+	src: url('../fonts/LoveYaLikeASister-Regular.ttf');
+}
+.quicksand{
+	font-family: quicksand;
+}
+.josefinSans{
+	font-family: josefinSans;
+}
+.dekko{
+	font-family: dekko;
+}
+.breeserif{
+	font-family: breeserif;
+}
+.asap{
+	font-family: asap;
+}
+
+.newsCycle{
+	font-family: newsCycle;
+}
+.merriweather{
+	font-family: Merriweather;
+}
+.sniglet{
+	font-family: Sniglet;
+}
+.pangolin{
+	font-family: Pangolin;
+}
+.happymonkey{
+	font-family: HappyMonkey;
+}
+.proximanova{
+	font-family: ProximaNova;
+}
+.shortstack{
+	font-family: ShortStack;
+}
+.patrickhand{
+	font-family: patrickhand;
+}
+.digital7{
+	font-family: digital7;
+}
+.luckiestguy{
+	font-family: luckiestguy;
+}
+.chelseamarket{
+	font-family: chelseamarket;
+}
+.comingsoon{
+	font-family: comingsoon;
+}
+.schoolbell{
+	font-family: schoolbell;
+}
+.dosis{
+	font-family: dosis;
+}
+.concertone{
+	font-family: concertone;
+}
+.amaticsc{
+	font-family: amaticsc;
+}
+.bubblegumsans{
+	font-family: bubblegumsans;
+}
+.pompiere{
+	font-family: pompiere;
+}
+.andika{
+	font-family: andika;
+}
+.amaranath{
+	font-family: amaranath;
+}
+.bangers{
+	font-family: bangers;
+}
+.boogaloo{
+	font-family: boogaloo;
+}
+.bubblerone{
+	font-family: bubblerone;
+}
+.comicsans{
+	font-family: comicsans;
+}
+.calibri{
+	font-family: calibri;
+}
+.bowlbyone{
+	font-family: bowlbyone;
+}
+.cambria{
+	font-family: cambria;
+}
+.comfortaa{
+	font-family: comfortaa;
+}
+.georgia{
+	font-family: georgia;
+}
+.bitter{
+	font-family: bitter;
+}
+.abeezee{
+		font-family: abeezee;
+}
+.cuprum{
+	font-family: cuprum;
+}
+.loveyalikeasister{
+	font-family: loveyalikeasister;
+}

@@ -1,0 +1,899 @@
+/* new css */
+
+
+/* .speechbox p {
+  top: 50%;
+  font-size: 3vh !important;
+} */
+
+/* .texts-s10 {
+    top: 13%;
+    left: 16%;
+    width: 80%;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .texts-s10:lang(np) {
+    font-size: 2.6rem;
+  } */
+.newsmann {
+  bottom: 0%;
+  position: absolute;
+  left: 31%;
+  font-size: 1.2em;
+  color: black;
+}
+
+.img-left-s2 {
+  position: absolute;
+  width: 83%;
+  left: 8%;
+}
+
+.img-right-s2 {
+  position: absolute;
+  width: 83%;
+  left: 8%;
+  top: 10%;
+}
+
+.texts-fb {
+  position: absolute;
+  top: 8% !important;
+  font-size: 1em !important;
+  left: 12%;
+}
+
+
+.wrong_fb_box {
+  position: absolute;
+  top: 13%;
+  left: 70%;
+  width: 30%;
+  height: 16%;
+  z-index: 99;
+}
+
+/* .wrong_fb {
+    width: 58%;
+    position: absolute;
+    height: 53%;
+    left: 96%;
+    z-index: 99;
+
+  } */
+
+.opt_2 {
+  width: 30%;
+  z-index: 99;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  cursor: pointer;
+  height: 50%;
+  border: 1px solid gray;
+  border-radius: 2em;
+  background-color: #eeeeee;
+  transition: all 0.3s ease-in;
+}
+
+.radiomann {
+  bottom: 0%;
+  position: absolute;
+  left: 39%;
+  font-size: 1.2em;
+  color: black;
+}
+
+.phonemann {
+  bottom: 0%;
+  position: absolute;
+  left: 24%;
+  font-size: 1.2em;
+  color: black;
+}
+
+.img-left {
+  position: absolute;
+  height: 79%;
+  left: 10%;
+  top: 9%;
+}
+
+.scalediv {
+  transform: scale(1.20);
+}
+
+.opt_1 {
+  z-index: 99;
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  height: 50%;
+  border: 1px solid gray;
+  border-radius: 2em;
+  background-color: #eeeeee;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  width: 30%;
+}
+
+.img-right {
+  position: absolute;
+  height: 79%;
+  left: 10%;
+  top: 3%;
+}
+
+.img-left:hover,
+.img-right:hover {
+  transform: scale(1.05);
+}
+
+.correct-sign {
+  position: absolute;
+  top: 76%;
+  left: 20%;
+  height: 13%;
+}
+
+.wrong-sign-s2 {
+  position: absolute;
+  top: 76%;
+  left: 20%;
+  height: 13%;
+}
+
+.bg_qu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+}
+
+.option {
+  height: 100%;
+  width: 33%;
+  top: 12%;
+}
+
+.sel-img-container {
+  height: 40%;
+  width: 75%;
+  top: 20%;
+  left: 12.5%;
+}
+
+.wrong-sign {
+  position: absolute;
+  top: 76%;
+  right: 20%;
+  height: 13%;
+}
+
+.wrong_fb_box2 {
+  position: absolute;
+  top: 13%;
+  left: 20%;
+  width: 30%;
+  height: 16%;
+  z-index: 99;
+}
+
+.img-right-s3 {
+  position: absolute;
+  width: 66%;
+  left: 16%;
+  top: 10%;
+}
+
+.telv-txt {
+  bottom: 0%;
+  position: absolute;
+  left: 31%;
+  font-size: 1.2em;
+  color: black;
+}
+
+.img-left-s3 {
+  position: absolute;
+  height: 79%;
+  left: 6%;
+  top: 2%;
+}
+
+.correct-sign-s2 {
+  position: absolute;
+  top: 76%;
+  right: 20%;
+  height: 13%;
+}
+
+
+.speechbox .texts-s10 {
+  top: 16%;
+}
+
+.speechbox .texts-s10:lang(np) {
+  top: 19%;
+}
+
+/* previous used css */
+body:lang(np),
+body:lang(np) * {
+  font-family: laila !important;
+}
+
+.background {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+}
+
+.background-bg {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.blue-bg-radial {
+  background-image: radial-gradient(#fff 10%, #7fe1e8 60%);
+}
+
+.blue-bg {
+  background-color: #90e6ed;
+}
+
+.spBox {
+  position: absolute;
+  top: 38%;
+  left: 18%;
+}
+
+.spBox-2 {
+  position: absolute;
+  top: 18%;
+  right: 28%;
+}
+
+.spBox-3 {
+  position: absolute;
+  top: 45%;
+  right: 35%;
+  height: 17%;
+}
+
+.spBox-4 {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+}
+
+.spBox-5 {
+  position: absolute;
+  top: 15%;
+  right: 22%;
+}
+
+.spSmall {
+  height: 18%;
+  width: 35%;
+}
+
+.spSmall-2 {
+  height: 18%;
+  width: 38%;
+}
+
+.textInSp {
+  width: 85%;
+  left: 56%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+.textInSp:lang(np) {
+  width: 85%;
+  left: 56%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3vmin;
+  text-align: center;
+}
+
+.textInSp-2 {
+  width: 85%;
+  left: 44%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.daughterspch {
+  font-size: 2.3rem;
+}
+
+.daughterspch:lang(np) {
+  font-size: 2.7rem;
+}
+
+.dadspch:lang(np) {
+  font-size: 2.7rem;
+}
+
+.dadspch {
+  width: 85%;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.3rem;
+  text-align: center;
+}
+
+.top-text {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  background-color: #5a95b5;
+  color: white;
+  text-align: center;
+  font-size: 2.6vw;
+  padding: 1%;
+  z-index: 1;
+}
+
+.top-text:lang(en) {
+  font-family: sniglet;
+}
+
+.zoomDiv {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+}
+
+.narrator-1 {
+  position: absolute;
+  bottom: 5%;
+  left: -3%;
+  width: 30%;
+}
+
+.narrator-2 {
+  position: absolute;
+  bottom: 17%;
+  left: 28%;
+  width: 15%;
+}
+
+.lightning {
+  position: absolute;
+  top: 13%;
+  left: 31%;
+  width: 25%;
+}
+
+.narrator-left {
+  position: absolute;
+  top: 27%;
+  left: 7%;
+  width: 35%;
+}
+
+.narrator-left-2 {
+  position: absolute;
+  left: 0%;
+  top: 30%;
+  width: 40%;
+}
+
+.narrator-right {
+  position: absolute;
+  right: 5%;
+  top: 34%;
+  width: 35%;
+}
+
+.radio {
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  height: 40%;
+  cursor: pointer;
+}
+
+.newspaper {
+  position: absolute;
+  top: 17%;
+  right: 13%;
+  height: 58%;
+  width: 28%;
+  cursor: pointer;
+}
+
+.mobiledialscreen {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 56%;
+  right: 35.5%;
+  width: 13.8%;
+  height: 5.8%;
+  z-index: 3;
+  background: #ffffff;
+  /* border: 1px solid red; */
+}
+
+.call-button {
+  position: absolute;
+  bottom: 11.5%;
+  right: 37.3%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-0 {
+  position: absolute;
+  bottom: 15.5%;
+  right: 37.3%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-1 {
+  position: absolute;
+  bottom: 31.5%;
+  right: 42.7%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-2 {
+  position: absolute;
+  bottom: 31.5%;
+  right: 37.5%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-3 {
+  position: absolute;
+  bottom: 31.5%;
+  right: 31.5%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-4 {
+  position: absolute;
+  bottom: 26.5%;
+  right: 42.7%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-5 {
+  position: absolute;
+  bottom: 26.5%;
+  right: 37.3%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-6 {
+  position: absolute;
+  bottom: 26.5%;
+  right: 31.5%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-7 {
+  position: absolute;
+  bottom: 20.5%;
+  right: 42.7%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-8 {
+  position: absolute;
+  bottom: 20.5%;
+  right: 37.1%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.num-9 {
+  position: absolute;
+  bottom: 20.5%;
+  right: 31.5%;
+  width: 6%;
+  cursor: pointer;
+}
+
+.number-eraser {
+  position: absolute;
+  top: 56%;
+  right: 31.5%;
+  width: 5%;
+  cursor: pointer;
+}
+
+.handtocall {
+  position: absolute;
+  bottom: 7%;
+  right: 37.3%;
+  height: 9%;
+  cursor: pointer;
+}
+
+.hand {
+  position: absolute;
+  top: 55%;
+  right: 25%;
+  height: 15%;
+}
+
+.hand-to-grandma {
+  position: absolute;
+  top: 71%;
+  right: 40%;
+  height: 7%;
+  cursor: pointer;
+}
+
+.hand-2 {
+  position: absolute;
+  top: 45%;
+  right: 56%;
+  height: 10%;
+  cursor: pointer;
+}
+
+.inverted {
+  transform: rotateY(180deg) scale(1);
+  object-position: bottom;
+}
+
+.inverted-2 {
+  transform: rotateY(180deg);
+}
+
+.grandma {
+  position: absolute;
+  top: 64%;
+  right: 35%;
+  height: 20%;
+}
+
+.man-talking {
+  position: absolute;
+  top: 27%;
+  left: -3%;
+  height: 70%;
+  z-index: 1;
+}
+
+.girl-talking {
+  position: absolute;
+  top: 23%;
+  right: -4%;
+  height: 67%;
+  z-index: 1;
+}
+
+.phone-table {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 50%;
+}
+
+
+.texts {
+  top: 30%;
+  left: 15%;
+  width: 80%;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+
+
+/* Fade Ins */
+
+.fadeInsfast {
+  animation: fadeinFast 3s linear forwards;
+}
+
+.fadeInsSuperfast {
+  animation: fadeinFast 1s linear forwards;
+}
+
+@keyframes fadeinFast {
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeOutFast {
+  opacity: 1;
+  animation: fadeoutfast 0.4s linear forwards;
+}
+
+@keyframes fadeoutfast {
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Fade Ins end*/
+
+.fadeIn {
+  display: block;
+  animation: fadein 1s linear forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* zoom animations */
+.zoomToGirl {
+  animation: zoomToGirl 4s linear forwards;
+}
+
+@keyframes zoomToGirl {
+  0% {
+    transform: scale(1, 1);
+    left: 0%;
+  }
+
+  100% {
+    transform: scale(2, 2);
+    left: 40%;
+    top: -20%;
+  }
+}
+
+.zoomToGrandma {
+  animation: zoomToGrandma 3s linear forwards;
+}
+
+@keyframes zoomToGrandma {
+  0% {
+    transform: scale(1, 1);
+    left: 0%;
+  }
+
+  100% {
+    transform: scale(1.5, 1.5);
+    left: 5%;
+    top: -25%;
+  }
+}
+
+/* zoom animations */
+
+.descriptionDiv {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.description-txt {
+  position: absolute;
+  width: 100%;
+  padding: 1%;
+  background-color: #5a95b5;
+}
+
+.decription-img {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.closeDiv {
+  position: absolute;
+  width: 5%;
+  z-index: 2;
+  right: 2%;
+  top: 1%;
+}
+
+.fadeIn {
+  display: block;
+  animation: fadein 1s linear forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.opaque {
+  opacity: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.hide-1 {
+  display: none;
+}
+
+.container-imgcol {
+  position: absolute;
+  width: 100%;
+  height: 63%;
+  top: 32%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.hand-1 {
+  position: absolute;
+  top: 66%;
+  left: 61%;
+  transform: translateX(-50%);
+  width: 7%;
+}
+
+.hand:hover,
+.closeDiv:hover,
+.clickable:hover {
+  cursor: pointer;
+}
+
+.h-news,
+.h-readbook {
+  top: 33%;
+  left: 16%;
+}
+
+.h-song,
+.h-readnews {
+  top: 33%;
+  left: 50%;
+}
+
+.h-program,
+.h-talk {
+  top: 33%;
+  left: 84%;
+}
+
+.com-means-img {
+  width: 21%;
+  height: 68%;
+}
+
+.com-means {
+  width: 100%;
+}
+
+.com-means-1 {
+  width: 100%;
+}
+
+.com-means-2 {
+  width: 100%;
+}
+
+.means-name {
+  position: absolute;
+  width: 100%;
+  background-color: #0097a7;
+  border-radius: 5px;
+  padding: 3%;
+  font-size: 1.3em;
+  top: 103%;
+}
+
+@media screen and (min-aspect-ratio: 4/3) {
+  .fs-3 {
+    font-size: 3vh;
+  }
+
+  .fs-4 {
+    font-size: 4vh;
+  }
+
+  .fs-5 {
+    font-size: 5.5vh;
+  }
+
+  .fs-7 {
+    font-size: 7vh;
+  }
+
+
+
+  .girl-talking {
+    height: 50%;
+    top: 33%;
+    right: 1%;
+  }
+
+  .man-talking {
+    height: 50%;
+    top: 35%;
+    right: 10%;
+  }
+}
+
+@media screen and (max-aspect-ratio: 4/3) {
+  .fs-3 {
+    font-size: 2vw;
+  }
+
+  .fs-4 {
+    font-size: 2.5vw;
+  }
+
+  .fs-5 {
+    font-size: 3.1vw;
+  }
+
+  .fs-7 {
+    font-size: 4vw;
+  }
+
+  .speechbox .texts-s10:lang(np) {
+    top: 30%;
+  }
+
+  .speechbox .texts-s10 {
+    top: 16%;
+  }
+
+  /* .speechbox p {
+    top: 50%;
+    font-size: 2.5vw !important;
+  } */
+
+
+
+
+
+}

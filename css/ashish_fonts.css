@@ -1,0 +1,99 @@
+@font-face {
+    font-family: happy_monkey;
+    src: url('../fonts/happy_monkey/HappyMonkey-Regular.ttf');
+}
+
+@font-face {
+    font-family: pangolin-regular;
+    src: url('../fonts/Pangolin-Regular.ttf');
+}
+
+@font-face {
+    font-family: laila;
+    src: url('../fonts/laila/laila-regular.ttf');
+}
+
+@font-face {
+    font-family: ohwhale;
+    src: url('../fonts/laila/OhWhale.ttf');
+}
+
+@font-face {
+    font-family: montserrat-semibold;
+    src: url('../fonts/laila/Montserrat-SemiBold.otf');
+}
+
+@font-face {
+    font-family: schoolbell;
+    src: url('../fonts/Schoolbell.ttf');
+}
+
+@font-face {
+    font-family: sniglet;
+    src: url('../fonts/sniglet.ttf');
+}
+
+@font-face {
+    font-family: chelsea_market;
+    src: url('../fonts/ChelseaMarket-Regular.ttf');
+}
+
+@font-face {
+    font-family: bungeeshade;
+    src: url('../fonts/BungeeShade-Regular.ttf');
+}
+
+@font-face {
+    font-family: bubblegum_sans;
+    src: url('../fonts/BubblegumSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: luckiestguy;
+    src: url('../fonts/LuckiestGuy-Regular.ttf');
+}
+
+@font-face {
+    font-family: acme;
+    src: url('../fonts/Acme-Regular.ttf');
+}
+
+@font-face {
+    font-family: amaranth;
+    src: url('../fonts/amaranath/amaranth-regular.ttf');
+}
+
+@font-face {
+    font-family: bangers;
+    src: url('../fonts/amaranath/Bangers-Regular.ttf');
+}
+
+@font-face {
+    font-family: comfortaa_bold;
+    src: url('../fonts/Comfortaa-Bold.ttf');
+}
+
+@font-face {
+    font-family: comfortaa_light;
+    src: url('../fonts/Comfortaa-Light.ttf');
+}
+
+@font-face {
+    font-family: comfortaa_regular;
+    src: url('../fonts/Comfortaa-Regular.ttf');
+}
+
+@font-face {
+    font-family: coming_soon;
+    src: url('../fonts/ComingSoon-Regular.ttf');
+}
+
+@font-face {
+    font-family: abeezee;
+    src: url('../fonts/ABeeZee/ABeeZee-Regular.ttf');
+}
+
+@font-face {
+    font-family: bitter;
+    src: url('../fonts/ABeeZee/Bitter-Regular.ttf');
+}

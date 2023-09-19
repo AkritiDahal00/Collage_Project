@@ -1,0 +1,374 @@
+.activity_container {
+    width      : 100%;
+    height     : 100%;
+    position   : relative;
+    overflow   : hidden;
+    font-size  : 1.3em;
+    background : #fff;
+    box-shadow : inset 0 0 30px #f2f2f2;
+}
+
+.activity_container, .activity_container * {
+    position : relative;
+    margin   : 0;
+    padding  : 0;
+}
+
+.activity_container .nextBtn{
+    display  : none;
+    position : absolute;
+    bottom   : 0%;
+    right    : 0%;
+    width    : 7%;
+    height   : 10%;
+    z-index  : 10;
+}
+
+.activity_container .prevBtn{
+    display  : none;
+    position : absolute;
+    bottom   : 0%;
+    left     : 0%;
+    width    : 7%;
+    height   : 10%;
+    z-index  : 10;
+}
+
+/* @font-face {
+    font-family: amaranth;
+    src: url("../fonts/amaranath/amaranth-regular.ttf");
+}
+
+@font-face {
+    font-family: patrick;
+    src: url("../../../../../../fonts/PatrickHand-Regular.ttf");
+}
+
+@font-face {
+    font-family: sniglet;
+    src: url("../../../../../../fonts/sniglet.ttf");
+}
+@font-face {
+    font-family: comicsansms;
+    src: url("../../../../../../fonts/ComicSansMSRegular.ttf");
+} */
+
+html, body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+p{
+	margin: 0;
+}
+.contentwithbg {
+	width: 100%;
+	height: 100%;
+	background: url("../images/introduction-slide.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.nextBtn {
+	display: none;
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+	width: 7%;
+	height: 10%;
+}
+
+.prevBtn {
+	display: none;
+	position: absolute;
+	bottom: 0%;
+	left: 0%;
+	width: 7%;
+	height: 10%;
+}
+
+.myNextStyle {
+	cursor: pointer;
+	background-image: url("../../../../../../images/arrows/arrow.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.myNextStyle:hover {
+	background-image: url("../../../../../../images/arrows/arrow_hover.png");
+}
+
+.myNextStyle:active {
+	background-image: url("../../../../../../images/arrows/arrow_active.png");
+}
+
+.myPrevStyle {
+	cursor: pointer;
+	background-image: url("../../../../../../images/arrows/arrow_prev.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.myPrevStyle:hover {
+	background-image: url("../../../../../../images/arrows/arrow_hover_prev.png");
+}
+
+.myPrevStyle:active {
+	background-image: url("../../../../../../images/arrows/arrow_active_prev.png");
+}
+
+.board {
+	position: absolute!important;
+	top: 0%;
+	left: 0%;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+
+.board:lang(en){
+    font-family: amaranth;
+}
+.vertical-horizontal-center {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.vertical-center {
+	position: relative;
+	top: 45%;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	text-align: center;
+}
+
+.coverboardfull {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+div.generalTemplateblock {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	/*border   : 1px solid red; */
+}
+
+div.headerblock {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 20%;
+	background-color: #E3D0DA;
+	color: #CE00A7;
+
+	/*border   : 1px solid red;*/
+}
+
+div.generalTemplateblock[data-templatecontains='hasheaderblock'] div.contentblock {
+	top: 20%;
+	height: 80%;
+	position: absolute;
+	width: 100%;
+}
+
+div.generalTemplateblock[data-templatecontains='hasonlycontent'] div.contentblock {
+	top: 0%;
+	height: 100%;
+}
+
+div.textblock {
+	position: relative;
+}
+
+div.imageblock {
+	position: absolute;
+	top: 39%;
+	right: 5%;
+	height: 55%;
+	width: 40%;
+}
+
+.display_image {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hint_image{
+	display: none;
+	min-height: 45%;
+	max-width: 80%;
+	max-height: 80%;
+}
+
+/*----------------------------------------------
+ * ------ css specific for this exercise -------
+ * ---------------------------------------------*/
+
+.background{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+}
+.corectClass{
+	border: 3px solid #0f0;
+}
+.incorectClass{
+	border: 3px solid #f00;
+}
+.corincor{
+	position: absolute;
+	width: 23%;
+	top: 60%;
+	left: 100%;
+	transform: translateY(-50%);
+	display: none;
+}
+.tpQn{
+	position: absolute;
+    width: 100%;
+    background: #61C5D7;
+    color: #fff;
+    font-family: abeezee;
+	padding: 1%;
+	top: 0%;
+}
+
+
+/*mcq*/
+
+.optionsdiv {
+    top: 50%;
+    display: flex;
+    left: 74%;
+    flex-direction: row;
+    text-align: left;
+    position: absolute;
+    height: 45%;
+    width: 26%;
+    flex-wrap: wrap;
+    /* background: #b7d4ff; */
+    transform: translateY(-50%);
+}
+
+.optionscontainer {
+  width: 100%;
+}
+
+.imagestartpos {
+	position: absolute;
+	width: 13%;
+	margin-left: 1%;
+	display: none;
+	margin-top: 12%;
+	left: 76%;
+	top: 5%;
+	transform: translateY(-7%);
+}
+.top57{
+  top: 57%;
+}
+
+.optionsdiv p {
+    padding: 2%;
+    background: #FFCD53;
+    border-radius: 15px;
+    margin: 1%;
+    font-size: 5vh;
+    border: 5px solid #FFCD53;
+    font-family: breeSerif;
+    width: 75%;
+    text-align: center;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.forhover:hover {
+    border: 5px solid #999999;
+    cursor: pointer;
+}
+
+.forhoverimg:hover{
+	color: #F66E20;
+	border: 5px solid #FFD966;
+}
+
+.imageblockclass {
+    position: absolute;
+    top: 50%;
+    border: 2px solid black;
+    width: 65%;
+    height: 40%;
+    left: 2%;
+    border-radius: 22px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row;
+    flex-wrap: wrap;
+    transform: translateY(-50%);
+}
+.qnImg{
+    height: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.imgNote{
+	height: 36%;
+}
+.img-2, .img-4{
+	height: 30%;
+}
+.subImg{
+	height: 5%;
+}
+.eqImg{
+	height: 15%;
+}
+@media screen and (min-aspect-ratio: 4/3) {
+	.fs-3{
+		font-size: 3vh;	
+	}
+	.fs-4{
+		font-size: 4vh;
+	}
+	.fs-5{
+		font-size: 5.5vh;
+	}
+	.fs-7{
+		font-size: 7vh;
+	}
+}
+
+@media screen and (max-aspect-ratio: 4/3) {
+	.fs-3{
+		font-size: 2vw;	
+	}
+	.fs-4{
+		font-size: 2.5vw;
+	}
+	.fs-5{
+		font-size: 3.1vw;
+	}
+	.fs-7{
+		font-size: 4vw;
+	}
+}

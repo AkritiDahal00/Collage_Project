@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eLearning>
+  <lesson>
+    <subject>Science</subject>
+    <topic>Science</topic>
+    <chapter>Conversation and Information</chapter>
+    <levelname>Grade 1</levelname>
+    <leveldescription>
+    </leveldescription>
+    <objective>
+      <title>Objectives:</title>
+      <description>
+        <purpose> To get acquainted with different means of communication used in daily lives.</purpose>
+      </description>
+    </objective>
+    <definition>
+      <description>
+      </description>
+    </definition>
+    <lessonDirection>
+      <purposes>
+      </purposes>
+      <about>
+      </about>
+      <lessonhelp>
+      </lessonhelp>
+      <exercisehelp>
+        <exerciseText>
+        </exerciseText>
+      </exercisehelp>
+    </lessonDirection>
+  </lesson>
+  <strings>
+ <string id="spacecharacter">Objects </string>
+    <string id="newLineCharacter">&#10;</string>
+<!-- page 1-->
+    <string id="title1">Communication</string>
+    <string id="slide1_sp1">It's Saturday and everyone's home. Let's check on my family.</string>
+    <string id="slide1_toptxt1">Father is listening to the radio.</string>
+    <string id="slide1_toptxt2">Click on the radio to find out what Asha’s father is listening to.</string>
+    
+    <string id="slide1_toptxt3">What is he listening to? Click on the correct option.</string>
+    <string id="slide1_p4_op1">A weather report</string>
+    <string id="slide1_p4_op2">Music</string>
+    
+    <string id="slide1_toptxt4">Mother is reading a newspaper. </string>
+    <string id="slide1_toptxt5">Click on the newspaper to find out what Asha’s mother is reading.</string>
+    <string id="slide1_toptxt6">What is she reading about? Click on the correct option.</string>
+    <string id="slide1_p8_op1">A weather forecast </string>
+    <string id="slide1_p8_op2">A cricket event</string>
+    
+    <string id="slide1_toptxt7">Grandfather needs to call Sita.</string>
+    <string id="slide1_toptxt8">Help him dial 1234 to call Sita.</string>
+    <string id="slide1_call">Hello hajurbuwa!</string>
+    <string id="slide1_call_next">Hello chhori!</string>
+
+
+    <string id="slide1_toptxt9">Sister is watching television.</string>
+    <string id="slide1_toptxt10">Click on the television to see what she is watching.</string>
+    <string id="slide1_p16_ques">What is she watching on a television? Click on the correct option.</string>
+
+
+    <string id="slider_txt1">We use a phone to talk to others.</string>
+    <string id="slider_txt2">We read a newspaper for news.</string>
+    <string id="slider_txt3">We watch news and sports events on a television.</string>
+    <string id="slider_txt4">We listen to a radio for news and music.</string>
+
+    <string id="slide1_spbox">Have you also used any of these devices? What do you use them for?</string>
+
+<!--page 1 ends here-->
+    
+
+    <!--page 2-->
+    <string id="slide2_toptxt1">What can you use to make phone calls?</string>
+    <string id="slide2_opt1">Mobile Phone</string>
+    <string id="slide2_opt2">Television</string>
+    <string id="wrong_feedback1">Try again! We generally use television to watch news, songs and movies.</string>
+    
+    <string id="slide2_toptxt2">Where can you read the news?</string>
+     <string id="slide2_q2_opt1">Radio</string>
+    <string id="slide2_q2_opt2">Newspaper</string>
+    <string id="wrong_feedback2">Try again! Radios are generally used for listening to news or music.</string>
+    <string id="wrong_feedback3">Try again! We generally use newspapers for reading news.</string>
+
+    <string id="slide2_toptxt3">What do you use for watching news?</string>
+    <string id="slide2_toptxt4">Where can you listen to the weather forecast?</string>
+    <string id="recipientNumber">01544444</string> 
+
+<!-- playtime -->
+    <string id="boy_sbtxt"> Who Am I?</string>
+    <string id="instruction">Recognize me and click on the correct image.</string>
+    <string id="instruction_1">People use me to read the news.</string>
+    <string id="instruction_2">People use me to listen to music.</string>
+    <string id="instruction_3">People use me to watch the news.</string>
+    <string id="instruction_4">People use me to listen to weather forecasts.</string>
+    <string id="instruction_5"> People use me to watch sports broadcasting.</string>
+    <string id="instruction_6">People use me to make video calls.</string>
+    <string id="instruction_7">People use me to read weather reports.</string>
+    <string id="instruction_8">People use me to make phone calls. </string>
+    <string id="instruction_9">People use me to watch movies.</string>
+    <string id="instruction_10">People use me to listen to sports news.</string>
+    <string id="playEndTxt">Congratulations! You learned about the communication!</string>
+
+  <string id="num0">0</string>
+  <string id="num1">1</string>
+  <string id="num2">2</string>
+  <string id="num3">3</string>
+  <string id="num4">4</string>
+  <string id="num5">5</string>
+  <string id="num6">6</string>
+  <string id="num7">7</string>
+  <string id="num8">8</string>
+  <string id="num9">9</string>
+
+  </strings>
+</eLearning>
