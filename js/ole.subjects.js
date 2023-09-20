@@ -152,7 +152,7 @@ window.onerror = function(message, source, lineno, colno, error) {
       /* iterate through allgrades array for current language*/
       // find out grade specific link
       var tempgradelink;
-
+      $('.dropdown,.sciencesubjecttab').hide();
       if ($sub == "english") {
         tempgradelink =
           "?sub=" +
@@ -613,26 +613,26 @@ window.onerror = function(message, source, lineno, colno, error) {
         var $subjectbranches = $(".typesd");
 
         // text for all subtype
-        var $all = datajsonobject.all[$lang];
+        // var $all = datajsonobject.all[$lang];
 
         // now create html for subject branches
-        var typesOfSub =
-          "<span><a id='hoveradd' href='' class='all' >" + $all + "</a></span>";
+        // var typesOfSub =
+        //   "<span><a id='hoveradd' href='' class='all' >" + $all + "</a></span>";
 
-        for (i = 0; i < $type.length; i++) {
-          typesOfSub +=
-            " | <span><a id='hoveradd' href='' class='" +
-            $typeid[i] +
-            "'>" +
-            $type[i] +
-            "</a></span>";
-        }
+        // for (i = 0; i < $type.length; i++) {
+        //   typesOfSub +=
+        //     " | <span><a id='hoveradd' href='' class='" +
+        //     $typeid[i] +
+        //     "'>" +
+        //     $type[i] +
+        //     "</a></span>";
+        // }
 
         // update subject branches
-        $subjectbranches.html(typesOfSub);
+        // $subjectbranches.html(typesOfSub);
 
         var activesubjecttabbgcolor = $(".subListSide li.active.key a").css({
-          "background-color":"#007ECC",
+          "background-color":"#01934f",
           "padding":'0.3em 0.7em 1.1em 0.7em'
         });
 
