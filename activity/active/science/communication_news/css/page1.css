@@ -335,8 +335,8 @@ body:lang(en) * {
   cursor: pointer;
   z-index: 9;
   position: absolute;
-  top: 67%;
-  right: 24%;
+  top: 55%;
+  right: 30%;
   height: 9%;
 }
 

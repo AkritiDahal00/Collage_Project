@@ -256,10 +256,10 @@ var content = [
 					imgclass: "shorty_girl_img2 grull2",
 					imgid: 'shorty_png',
 				},
-				{
-					imgclass: "aamai",
-					imgid: 'aamai',
-				},
+				// {
+				// 	imgclass: "aamai",
+				// 	imgid: 'aamai',
+				// },
 				{
 					imgclass: "hand2 opaque2",
 					imgid: 'hand',

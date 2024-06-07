@@ -5,7 +5,47 @@
     "np": "सञ्‍चार",
     "id": "can",
     "subId": "science",
-    "donor": "rti",
+ 
+    "type": "Health and Nutrition",
+    "image": "images/thumb/science/thumbnail_communication_new.png",
+    "imagebig": "images/thumb/science/communication_insight.png",
+    "levels": [
+      {
+        "name": {
+          "en": "Level I",
+          "np": "तह १"
+        },
+        "thumbnail": "images/thumb/english/making-words-gr1-02.png",
+        "id": "smthForEx",
+        "desc": {
+          "en": "Conversation and Information",
+          "np": "कुराकानी र जानकारी"
+        },
+        "folder": "active/science/communication_news",
+        "exercise": [
+          "playtime/playtime.html"
+        ],
+        "pages": [
+          "page1.html",
+          "page2.html"
+        ],
+        "sections": [
+          {
+            "en": "Conversation and Information",
+            "np": "कुराकानी र जानकारी",
+            "startpage": 1,
+            "endPage": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Communication_new": {
+    "en": "Communication",
+    "np": "सञ्‍चार",
+    "id": "can",
+    "subId": "science",
+ 
     "type": "Health and Nutrition",
     "image": "images/thumb/science/thumbnail_communication_new.png",
     "imagebig": "images/thumb/science/communication_insight.png",
@@ -40,5 +80,46 @@
       }
     ]
   }
-}
+},
+"grade2": {
+  "Communication_news": {
+      "en": "Communication",
+      "np": "सञ्‍चार",
+      "id": "can",
+      "subId": "science",
+      "type": "Health and Nutrition",
+      "image": "images/thumb/science/thumbnail_communication_new.png",
+      "imagebig": "images/thumb/science/communication_insight.png",
+      "levels": [
+        {
+          "name": {
+            "en": "Level I",
+            "np": "तह १"
+          },
+          "thumbnail": "images/thumb/english/making-words-gr1-02.png",
+          "id": "smthForEx",
+          "desc": {
+            "en": "Conversation and Information",
+            "np": "कुराकानी र जानकारी"
+          },
+          "folder": "active/science/communication_news",
+          "exercise": [
+            "playtime/playtime.html"
+          ],
+          "pages": [
+            "page1.html",
+            "page2.html"
+          ],
+          "sections": [
+            {
+              "en": "Conversation and Information",
+              "np": "कुराकानी र जानकारी",
+              "startpage": 1,
+              "endPage": 2
+            }
+          ]
+        }
+      ]
+    }
+  }
 }

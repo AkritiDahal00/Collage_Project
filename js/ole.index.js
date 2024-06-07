@@ -377,8 +377,8 @@
             "color":"#FFF",
           });
           // $(this).removeClass("grayColor");
-          $('.chooseSubjectText').css({"background":"#fd8048","color":"#FFF"})
-          $(".imghov0 img").attr("src", "images/science_homepage_color.png");
+          $('.chooseSubjectText').css({"background":"#11710b","color":"#FFF"})
+          $(".imghov0 img").attr("src", "images/science_logo.png");
           $(".imghov1 img").attr("src", "images/math_homepage_color.png");
           $(".imghov2 img").attr("src", "images/english_homepage_color.png");
           $(".imghov3 img").attr("src", "images/nepali_homepage_color.png");
@@ -388,7 +388,7 @@
           //  console.log(movepos);
            var giveBlueBallPos = function(){
              var pos = (movepos<=1)?
-                        3+((movepos-1)*13)+"%":
+                        3+((movepos-1)*23)+"%":
                         (movepos>1&&movepos<=3)?
                         3+((movepos-1)*12.5)+"%":
                       (movepos>3&&movepos<=8)?
@@ -402,7 +402,7 @@
              $('.rowDivClass').append("<p class='blueball'></p>");
              $(".blueball").css("left", giveBlueBallPos());
                 setTimeout(()=>{
-                  $(".blueball").css("opacity","1")
+                  $(".blueball").css("opacity","0")
                   $(this).removeClass("insideGradeDivs_active");
                 },500)
            }else{

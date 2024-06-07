@@ -197,7 +197,7 @@ body{
 }
 #activity-page-title #breadCrumbSpan:nth-child(5) {
   font-weight: bold;
-  color: #324387 !important;
+  color: #eff2ff !important;
   width: 60%;
 }
 
@@ -324,7 +324,7 @@ body{
     margin-left: 1vw;
     margin-right: 2vw;
     font-weight: bold;
-    font-size: 1.1vw;
+    font-size: 3.1vw;
     white-space: nowrap;
 }
 @media(max-width:500px){
@@ -351,7 +351,7 @@ body{
 	white-space: pre;
 }
 #activity-page-lang-switch span {
-	color: #324387;
+	color: #67ffb3;
 }
 
 #activity-page-help-text {

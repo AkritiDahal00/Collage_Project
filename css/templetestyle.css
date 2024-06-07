@@ -2424,7 +2424,7 @@ a.startContinueBtn {
     rgba(53, 189, 186, 1) 100%,
     rgba(0, 212, 255, 1) 100%
   ); */
-  background-color: #00b0dc;
+  background-color: #24770e;
   font-family: roboto;
   color: white;
   font-size: 3vmin;
@@ -3006,7 +3006,7 @@ body:lang(en) .footerNotification .restartPage:before {
 }
 
 .breadCrumbSpan {
-  color: #324387;
+  color: #fff;
   font-size: 1.8vw;
 
   /* padding: 0 1%; */
@@ -5852,7 +5852,7 @@ button.nakkalibutton2 {
   }
 
   #activity-page-lang-switch {
-    font-size: 1.6vw;
+    font-size: 2.5vw;
   }
 
   #activity-page-navigation-controller {
@@ -6180,7 +6180,7 @@ button.nakkalibutton2 {
   content: ' ';
   width: 100%;
   height: 100%;
-  background: #00b0dc;
+  background: green;
   clip-path: inset(0% 0% 50% 0%);
   /* background: linear-gradient(0deg, rgba(49,38,232,0.014443277310924318) -70%, #00B0DC 0%); */
   /* background: blue; */
@@ -6232,13 +6232,13 @@ button.nakkalibutton2 {
 }
 
 .grayColor {
-  color: #14738b;
+  color: green;
   background-color: #ebebeb;
-  border: 0.4vmin solid #ebebeb;
+  border: 0.2vmin solid #ebebeb;
   pointer-events: none;
 }
 
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .animateline {
     margin-top: 2%;
   }
@@ -6248,17 +6248,17 @@ button.nakkalibutton2 {
   } */
   /* .rowDivClass {
     height : 9%;
-  } */
-}
+  } 
+} */
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   .animateline {
     margin-top: 2%;
   }
 
   /* .rowDivClass {
     height : 8%;
-  } */
+  } 
   .bigImageforStartPage {
     bottom: -15%;
   }
@@ -6268,7 +6268,7 @@ button.nakkalibutton2 {
     font-size: 10px;
     background-size: 45px 40px;
   }
-}
+} */
 
 /* css for term and condition page */
 .back_arrow {
