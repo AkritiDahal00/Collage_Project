@@ -16,7 +16,7 @@ var timeout;
 // }
 // function randomizePlaytime() {
 
-var content = [
+var content = [ 
 	// slide 0
 	{
 		contentblockadditionalclass: 'blue-bg',
@@ -644,86 +644,86 @@ $(function () {
 		}
 	}
 
-	function TalkGifManager(girlClass, pngGifId, soundId, soundId2, delay) {
-		setTimeout(function () {
-			$(".speechbox").addClass("fadeInsSuperfast");
-			girlClass.attr("src", preload.getResult(pngGifId[1]).src);
-			createjs.Sound.stop();
-			current_sound = createjs.Sound.play(soundId);
-			current_sound.play();
-			current_sound.on('complete', function () {
-				girlClass.attr("src", preload.getResult(pngGifId[0]).src);
-				$(".hand-2").addClass("fadeInsfast");
-				$(".hand-2").click(function () {
-					// Going to next page
-					createjs.Sound.stop();
-					clearTimeout(timeout);
-					switch (countNext) {
-						default:
-							countNext++;
-							templateCaller();
-							break;
-					}
-				});
-				nav_button_controls();
-			});
-		}, delay);
-	}
-	function TalkGifManager2(girlClass, pngGifId, soundId, delay) {
-		setTimeout(function () {
-			$(".speechbox").addClass("fadeInsSuperfast");
-			girlClass.attr("src", preload.getResult(pngGifId[1]).src);
-			createjs.Sound.stop();
-			current_sound = createjs.Sound.play(soundId);
-			current_sound.play();
-			current_sound.on('complete', function () {
-				girlClass.attr("src", preload.getResult(pngGifId[0]).src);
-				// sound_player(soundId);
-				nav_button_controls();
-			});
-		}, delay);
-	}
+	// function TalkGifManager(girlClass, pngGifId, soundId, soundId2, delay) {
+	// 	setTimeout(function () {
+	// 		$(".speechbox").addClass("fadeInsSuperfast");
+	// 		girlClass.attr("src", preload.getResult(pngGifId[1]).src);
+	// 		createjs.Sound.stop();
+	// 		current_sound = createjs.Sound.play(soundId);
+	// 		current_sound.play();
+	// 		current_sound.on('complete', function () {
+	// 			girlClass.attr("src", preload.getResult(pngGifId[0]).src);
+	// 			$(".hand-2").addClass("fadeInsfast");
+	// 			$(".hand-2").click(function () {
+	// 				// Going to next page
+	// 				createjs.Sound.stop();
+	// 				clearTimeout(timeout);
+	// 				switch (countNext) {
+	// 					default:
+	// 						countNext++;
+	// 						templateCaller();
+	// 						break;
+	// 				}
+	// 			});
+	// 			nav_button_controls();
+	// 		});
+	// 	}, delay);
+	// }
+	// function TalkGifManager2(girlClass, pngGifId, soundId, delay) {
+	// 	setTimeout(function () {
+	// 		$(".speechbox").addClass("fadeInsSuperfast");
+	// 		girlClass.attr("src", preload.getResult(pngGifId[1]).src);
+	// 		createjs.Sound.stop();
+	// 		current_sound = createjs.Sound.play(soundId);
+	// 		current_sound.play();
+	// 		current_sound.on('complete', function () {
+	// 			girlClass.attr("src", preload.getResult(pngGifId[0]).src);
+	// 			// sound_player(soundId);
+	// 			nav_button_controls();
+	// 		});
+	// 	}, delay);
+	// }
 
-	function HandleClose() {
-		$(".closeDiv").click(function () {
-			$(".descriptionDiv, .closeDiv").removeClass("fadeIn").addClass("hidden");
-			$(".hand").show();
-		});
-	}
-	function HandlehandClick(means) {
-		var counter = 0;
-		$(".clickable").click(function () {
-			counter++;
-			var action = $(this).attr("class").split(" ")[1].split("-")[1];
-			$(".hand").hide();
-			$(".decription-img").attr("src", preload.getResult(means + "-" + action).src);
-			writeText(action, counter);
-			$(".descriptionDiv ").removeClass("hidden").addClass("fadeIn");
-			// nav_button_controls();
-		});
-	}
+	// function HandleClose() {
+	// 	$(".closeDiv").click(function () {
+	// 		$(".descriptionDiv, .closeDiv").removeClass("fadeIn").addClass("hidden");
+	// 		$(".hand").show();
+	// 	});
+	// }
+	// function HandlehandClick(means) {
+	// 	var counter = 0;
+	// 	$(".clickable").click(function () {
+	// 		counter++;
+	// 		var action = $(this).attr("class").split(" ")[1].split("-")[1];
+	// 		$(".hand").hide();
+	// 		$(".decription-img").attr("src", preload.getResult(means + "-" + action).src);
+	// 		writeText(action, counter);
+	// 		$(".descriptionDiv ").removeClass("hidden").addClass("fadeIn");
+	// 		// nav_button_controls();
+	// 	});
+	// }
 
-	function writeText(action, counter) {
-		// console.log(action);
-		switch (action) {
-			case "news":
-				console.log(counter);
-				$(".description-txt").html(data.string.p2s3t11);
-				sound_player2("radio-news-sound", true, true, counter);
-				break;
-			case "song":
-				console.log(counter);
-				$(".description-txt").html(data.string.p2s3t22);
-				sound_player2("radio-song-sound", true, true, counter);
-				break;
-			case "program":
-				console.log(counter);
-				$(".description-txt").html(data.string.p2s3t33);
-				sound_player2("radio-program-sound", true, true, counter);
-				break;
-		}
+	// function writeText(action, counter) {
+	// 	// console.log(action);
+	// 	switch (action) {
+	// 		case "news":
+	// 			console.log(counter);
+	// 			$(".description-txt").html(data.string.p2s3t11);
+	// 			sound_player2("radio-news-sound", true, true, counter);
+	// 			break;
+	// 		case "song":
+	// 			console.log(counter);
+	// 			$(".description-txt").html(data.string.p2s3t22);
+	// 			sound_player2("radio-song-sound", true, true, counter);
+	// 			break;
+	// 		case "program":
+	// 			console.log(counter);
+	// 			$(".description-txt").html(data.string.p2s3t33);
+	// 			sound_player2("radio-program-sound", true, true, counter);
+	// 			break;
+	// 	}
 
-	}
+	// }
 
 	function nav_button_controls(delay_ms) {
 		timeoutvar = setTimeout(function () {
